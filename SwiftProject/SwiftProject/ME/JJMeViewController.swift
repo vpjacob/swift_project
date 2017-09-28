@@ -10,9 +10,18 @@ import UIKit
 
 class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
+    func initData() {
+        self.dataSource = [
+        [["name":"金蛋","icon":"me_goldegg"]],
+        [["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],],
+        [["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],],
+        [["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],["name":"金蛋","icon":"me_goldegg"],]
+        ]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initData()
         let leftImage = UIImage(named: "me_more@2x")
         let leftBtn = UIBarButtonItem(image: leftImage, style: UIBarButtonItemStyle.plain, target: self, action: nil)
         self.navigationItem.rightBarButtonItem = leftBtn
@@ -31,17 +40,30 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return self.dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        let array = self.dataSource[section] as! [Dictionary<String,Any>]
+        
+        return array.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        if indexPath.section == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JJMeHeaderSectionCollectionViewCell", for: indexPath)
+            
+            
+            return cell
+        }
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JJGuanJiaCollectionViewCell", for: indexPath) as! JJGuanJiaCollectionViewCell
         cell.backgroundColor = UIColor.red
+        let array = self.dataSource[indexPath.section] as! [Dictionary<String,Any>]
         
+        cell.icon_imageView.image = UIImage(named: array[indexPath.row]["icon"] as! String)
+        cell.name_title.text = array[indexPath.row]["name"] as? String
         
         return cell
     }
@@ -51,6 +73,11 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        if indexPath.section == 0 {
+            return CGSize(width: Screen_Width, height: 219)
+        }
+        
+        
         return CGSize(width: Screen_Width * 0.25 - 1, height: 90)
     }
     
@@ -71,6 +98,7 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib.init(nibName: "JJGuanJiaCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "JJGuanJiaCollectionViewCell")
+        collectionView.register(UINib.init(nibName: "JJMeHeaderSectionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "JJMeHeaderSectionCollectionViewCell")
         return collectionView
     }()
 
