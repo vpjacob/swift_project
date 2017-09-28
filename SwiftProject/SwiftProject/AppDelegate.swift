@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.backgroundColor = UIColor.white
         let tabVC = JJTabBarViewController()
-        let nav = JJNavController(rootViewController: tabVC)
-        window?.rootViewController = nav
+//        let nav = JJNavController(rootViewController: tabVC)
+        window?.rootViewController = tabVC
         
         showAdvertisment()
         

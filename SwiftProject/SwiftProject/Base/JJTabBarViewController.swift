@@ -32,16 +32,20 @@ class JJTabBarViewController: UITabBarController {
         initViewControllers(VC: ShopVC!, title: "商城", iconString: "shop")
         initViewControllers(VC: MeVC!, title: "我的", iconString: "me")
         
-        self.viewControllers = [GuanjiaVC!,ShangJiaVC!,HomeVC!,ShopVC!,MeVC!]
+//        self.viewControllers = [GuanjiaVC!,ShangJiaVC!,HomeVC!,ShopVC!,MeVC!]
         
     }
     
 
     func initViewControllers(VC:JJBaseViewController,title:String,iconString:String) {
+        let nav = JJNavController(rootViewController: VC)
+        
+        
         VC.tabBarItem.image = UIImage(named: iconString)
         VC.tabBarItem.selectedImage = UIImage(named: iconString + "selected")
         VC.tabBarItem.title = title
 //        self.navigationItem.titleView = VC.navigationItem.titleView;
+        self.addChildViewController(nav)
     }
     
 

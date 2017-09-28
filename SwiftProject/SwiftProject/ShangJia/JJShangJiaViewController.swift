@@ -12,7 +12,7 @@ class JJShangJiaViewController: JJBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "商家"
         // Do any additional setup after loading the view.
     }
 
