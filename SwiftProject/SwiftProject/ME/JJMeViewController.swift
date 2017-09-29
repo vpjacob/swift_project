@@ -30,7 +30,6 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController
     }
     
     override func viewDidLoad() {
@@ -39,7 +38,10 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
         initData()
         let leftImage = UIImage(named: "me_more@2x")
         let leftBtn = UIBarButtonItem(image: leftImage, style: UIBarButtonItemStyle.plain, target: self, action: nil)
-        self.navigationItem.rightBarButtonItem = leftBtn
+        let rightImage = UIImage(named:"me_goldegg")
+        let rightBtn  = UIBarButtonItem(image: rightImage, style: UIBarButtonItemStyle.plain, target: self, action: nil)
+        
+        self.navigationItem.rightBarButtonItem = rightBtn
         self.navigationItem.leftBarButtonItem = leftBtn
         
         navBar = self.navigationController?.navigationBar
@@ -91,6 +93,20 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
         
     }
 
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let offsetY = scrollView.contentOffset.y
+//        if offsetY > 0 && offsetY <= 49 {
+//            self.navigationController?.navigationBar.backgroundColor = UIColor().hexStringToColor(hexString: "#ff602f").withAlphaComponent(offsetY/49)
+//        }else if (offsetY > 49){
+//            self.navigationController?.navigationBar.backgroundColor = UIColor().hexStringToColor(hexString: "#ff602f")
+//        }else{
+//            UIView.animate(withDuration: 0.1, animations: {
+//                self.navigationController?.navigationBar.backgroundColor?.withAlphaComponent(1)
+//            })
+//        }
+//
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         if indexPath.section == 0 {
             return CGSize(width: Screen_Width, height: 219)
