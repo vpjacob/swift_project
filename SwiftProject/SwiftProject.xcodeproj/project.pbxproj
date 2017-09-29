@@ -31,6 +31,8 @@
 		D69A41951F7B699700F363BB /* JJShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A41941F7B699700F363BB /* JJShopViewController.swift */; };
 		D69A41991F7B7C5200F363BB /* JJqqqqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A41981F7B7C5200F363BB /* JJqqqqViewController.swift */; };
 		D69A41A11F7B9BE200F363BB /* PCHFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A41A01F7B9BE200F363BB /* PCHFile.swift */; };
+		D6FD1EA31F7E1ADF00E7C79F /* JJMeSectionTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD1EA11F7E1ADF00E7C79F /* JJMeSectionTitleCollectionViewCell.swift */; };
+		D6FD1EA41F7E1ADF00E7C79F /* JJMeSectionTitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6FD1EA21F7E1ADF00E7C79F /* JJMeSectionTitleCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		D69A41981F7B7C5200F363BB /* JJqqqqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJqqqqViewController.swift; sourceTree = "<group>"; };
 		D69A41A01F7B9BE200F363BB /* PCHFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCHFile.swift; sourceTree = "<group>"; };
 		D6A577B15C32E80FF61AD020 /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6FD1EA11F7E1ADF00E7C79F /* JJMeSectionTitleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJMeSectionTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6FD1EA21F7E1ADF00E7C79F /* JJMeSectionTitleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJMeSectionTitleCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			children = (
 				D686C87B1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.swift */,
 				D686C87C1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.xib */,
+				D6FD1EA11F7E1ADF00E7C79F /* JJMeSectionTitleCollectionViewCell.swift */,
+				D6FD1EA21F7E1ADF00E7C79F /* JJMeSectionTitleCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 				D686C8771F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.xib in Resources */,
 				D686C87E1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.xib in Resources */,
 				D686C8751F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib in Resources */,
+				D6FD1EA41F7E1ADF00E7C79F /* JJMeSectionTitleCollectionViewCell.xib in Resources */,
 				D686C8791F7C9926002FCAFA /* JJTitleCollectionReusableView.xib in Resources */,
 				D69A41751F7B3C6B00F363BB /* LaunchScreen.storyboard in Resources */,
 				D69A41721F7B3C6B00F363BB /* Assets.xcassets in Resources */,
@@ -351,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D69A41891F7B4A2900F363BB /* JJNavController.swift in Sources */,
+				D6FD1EA31F7E1ADF00E7C79F /* JJMeSectionTitleCollectionViewCell.swift in Sources */,
 				D69A418F1F7B697300F363BB /* JJHomeViewController.swift in Sources */,
 				D69A41911F7B697C00F363BB /* JJMeViewController.swift in Sources */,
 				D69A418B1F7B690D00F363BB /* JJBaseViewController.swift in Sources */,

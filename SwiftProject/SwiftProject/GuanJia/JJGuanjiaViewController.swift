@@ -10,6 +10,8 @@ import UIKit
 
 class JJGuanjiaViewController: JJBaseViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
 
+    
+    
     func initData() {
        self.dataSource = [
         [["icon":"kmjl","name":"开门记录"],["icon":"yjkm","name":"一键开门"],["icon":"mksp","name":"门口视频"],["icon":"mjys","name":"门禁钥匙"],],
@@ -20,8 +22,12 @@ class JJGuanjiaViewController: JJBaseViewController,UICollectionViewDataSource,U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.automaticallyAdjustsScrollViewInsets = false
         initData()
         self.view.addSubview(jjCollectionView)
+
+        
+        
         
     }
     
@@ -91,18 +97,14 @@ class JJGuanjiaViewController: JJBaseViewController,UICollectionViewDataSource,U
     }()
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(true)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-    }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
 

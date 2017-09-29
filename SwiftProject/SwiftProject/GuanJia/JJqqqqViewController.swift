@@ -12,7 +12,8 @@ class JJqqqqViewController: JJBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.red
+//        self.navigationController?.navigationBar.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
     }
 

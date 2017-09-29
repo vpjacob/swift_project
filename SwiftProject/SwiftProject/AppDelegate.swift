@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let url = URL(string: "http://xk.ppke.cn:9030/xk/appStartImg.do")
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -33,12 +35,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func showAdvertisment() {
         let defaultImage = UIImage(named: "ad_image.png")
-        
         SplashView.showSplashView(defaultImage: defaultImage, tapSplashImageBlock: { (tapString) in
             
         }) { (dissMiss) in
             
         }
+        let headers: HTTPHeaders = [
+            "Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
+            "Accept": "application/json"
+        ]
+        
+        Alamofire.request(url!, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers).response { (response) in
+            let string = String(data: response.data!, encoding: .utf8)
+            print(string!)
+    
+        }
+        
+        
+
+//        Alamofire.request("https://httpbin.org/get").response { response in
+//            print("Request: \(String(describing: response.request))")
+//            print("Response: \(response.response)")
+//            print("Error: \(response.error)")
+//            response.error
+//            response.response
+//            response.data
+//            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+//                print("Data: \(utf8Text)")
+//            }
+//        }
+
+        
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

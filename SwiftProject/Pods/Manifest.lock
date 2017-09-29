@@ -1,18 +1,21 @@
 PODS:
   - Alamofire (4.5.0)
+  - FSPagerView (0.5.5)
   - Kingfisher (3.10.3)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
+  - FSPagerView
   - Kingfisher
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  FSPagerView: 3ec72e6b201d77a48adab5ed1d33b43a8cc153d6
   Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: da693755bc7278f705ff83f575f551e43e2ce58c
+PODFILE CHECKSUM: f196e78fa37edb49e9fb4a4b866bbd21f2d55593
 
 COCOAPODS: 1.2.1

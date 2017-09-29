@@ -7,7 +7,7 @@ target 'SwiftProject' do
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'Kingfisher'
-
+pod 'FSPagerView'
 
   # Pods for SwiftProject
 
