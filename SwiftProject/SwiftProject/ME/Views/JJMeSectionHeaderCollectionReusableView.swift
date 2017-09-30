@@ -1,18 +1,18 @@
 //
-//  JJMeSectionTitleCollectionViewCell.swift
+//  JJMeSectionHeaderCollectionReusableView.swift
 //  SwiftProject
 //
-//  Created by 刘毅 on 2017/9/29.
+//  Created by 刘毅 on 2017/9/30.
 //  Copyright © 2017年 vpjacob. All rights reserved.
 //
 
 import UIKit
 
-class JJMeSectionTitleCollectionViewCell: UICollectionViewCell {
+class JJMeSectionHeaderCollectionReusableView: UICollectionReusableView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
 }
