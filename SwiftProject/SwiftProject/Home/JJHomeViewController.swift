@@ -13,6 +13,7 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.automaticallyAdjustsScrollViewInsets = false
         initSycleView()
         // Do any additional setup after loading the view.
     }

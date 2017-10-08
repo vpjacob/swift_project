@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		95B7F6830D9A68FB5A77BA93 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A577B15C32E80FF61AD020 /* Pods_SwiftProject.framework */; };
+		AC81D2FA1F89AD6B00A10C4B /* JJMeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81D2F91F89AD6A00A10C4B /* JJMeNavView.swift */; };
 		D686C8741F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686C86E1F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift */; };
 		D686C8751F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D686C86F1F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib */; };
 		D686C8761F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686C8701F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift */; };
@@ -35,12 +36,12 @@
 		D6FA5BE71F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6FA5BE51F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib */; };
 		D6FA5BEA1F7F865A00C08659 /* JJBottomADCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA5BE81F7F865A00C08659 /* JJBottomADCollectionViewCell.swift */; };
 		D6FA5BEB1F7F865A00C08659 /* JJBottomADCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6FA5BE91F7F865A00C08659 /* JJBottomADCollectionViewCell.xib */; };
-		D6FA5BED1F7F935C00C08659 /* JJNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA5BEC1F7F935C00C08659 /* JJNavView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		40C1862E310E562824E4C37E /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		81679C9CBFD56E434FDDD9AF /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
+		AC81D2F91F89AD6A00A10C4B /* JJMeNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJMeNavView.swift; sourceTree = "<group>"; };
 		D686C86E1F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJGuanJiaCollectionViewCell.swift; sourceTree = "<group>"; };
 		D686C86F1F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJGuanJiaCollectionViewCell.xib; sourceTree = "<group>"; };
 		D686C8701F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJHomeBannerCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		D6FA5BE51F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJMeSectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		D6FA5BE81F7F865A00C08659 /* JJBottomADCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJBottomADCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6FA5BE91F7F865A00C08659 /* JJBottomADCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJBottomADCollectionViewCell.xib; sourceTree = "<group>"; };
-		D6FA5BEC1F7F935C00C08659 /* JJNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJNavView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +117,7 @@
 				D6FA5BE51F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib */,
 				D6FA5BE81F7F865A00C08659 /* JJBottomADCollectionViewCell.swift */,
 				D6FA5BE91F7F865A00C08659 /* JJBottomADCollectionViewCell.xib */,
+				AC81D2F91F89AD6A00A10C4B /* JJMeNavView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,7 +225,6 @@
 			children = (
 				D69A41841F7B461800F363BB /* SplashView.swift */,
 				D69A41A01F7B9BE200F363BB /* PCHFile.swift */,
-				D6FA5BEC1F7F935C00C08659 /* JJNavView.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -327,7 +327,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6EB519218C6CD9DDEAB04D96 /* [CP] Embed Pods Frameworks */ = {
@@ -377,11 +377,11 @@
 				D686C87D1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.swift in Sources */,
 				D686C8761F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift in Sources */,
 				D686C8741F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift in Sources */,
+				AC81D2FA1F89AD6B00A10C4B /* JJMeNavView.swift in Sources */,
 				D69A41951F7B699700F363BB /* JJShopViewController.swift in Sources */,
 				D69A416B1F7B3C6B00F363BB /* AppDelegate.swift in Sources */,
 				D69A41991F7B7C5200F363BB /* JJqqqqViewController.swift in Sources */,
 				D6FA5BE61F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift in Sources */,
-				D6FA5BED1F7F935C00C08659 /* JJNavView.swift in Sources */,
 				D69A41A11F7B9BE200F363BB /* PCHFile.swift in Sources */,
 				D69A41871F7B4A0A00F363BB /* JJTabBarViewController.swift in Sources */,
 				D69A41851F7B461800F363BB /* SplashView.swift in Sources */,

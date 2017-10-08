@@ -8,6 +8,8 @@ pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'Kingfisher'
 pod 'FSPagerView'
+pod 'DGElasticPullToRefresh'
+
 
   # Pods for SwiftProject
 

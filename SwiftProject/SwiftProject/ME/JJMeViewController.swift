@@ -50,7 +50,7 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
         self.view.addSubview(collectionView)
         // Do any additional setup after loading the view.
         
-        self.view.addSubview(JJNavView(frame: CGRect(x: 0, y: 0, width: Screen_Width, height: 64)))
+        self.view.addSubview(JJMeNavView(frame: CGRect(x: 0, y: 0, width: Screen_Width, height: 64)))
 //        self.view.addSubview(navView)
     }
     
@@ -85,9 +85,7 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
         }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JJGuanJiaCollectionViewCell", for: indexPath) as! JJGuanJiaCollectionViewCell
-        cell.backgroundColor = UIColor.red
         let array = self.dataSource[indexPath.section] as! [Dictionary<String,Any>]
-        
         cell.icon_imageView.image = UIImage(named: array[indexPath.row]["icon"] as! String)
         cell.name_title.text = array[indexPath.row]["name"] as? String
         
@@ -168,7 +166,7 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
         flowLayout.minimumLineSpacing = 2
         flowLayout.minimumInteritemSpacing = 0
         
-        let rect = CGRect(x: 0, y: 0, width: Screen_Width, height: Screen_Height - KTabbar_Height)
+        let rect = CGRect(x: 0, y: -20, width: Screen_Width, height: Screen_Height - KTabbar_Height)
         let collectionView = UICollectionView(frame: rect, collectionViewLayout: flowLayout)
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
