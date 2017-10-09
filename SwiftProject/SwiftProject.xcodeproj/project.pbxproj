@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		95B7F6830D9A68FB5A77BA93 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A577B15C32E80FF61AD020 /* Pods_SwiftProject.framework */; };
 		AC81D2FA1F89AD6B00A10C4B /* JJMeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81D2F91F89AD6A00A10C4B /* JJMeNavView.swift */; };
+		D65C6F231F8B64B5000A9F7E /* JJGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C6F211F8B64B5000A9F7E /* JJGuideView.swift */; };
+		D65C6F261F8B7002000A9F7E /* JJLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C6F241F8B7002000A9F7E /* JJLogViewController.swift */; };
+		D65C6F271F8B7002000A9F7E /* JJLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65C6F251F8B7002000A9F7E /* JJLogViewController.xib */; };
 		D686C8741F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686C86E1F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift */; };
 		D686C8751F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D686C86F1F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib */; };
 		D686C8761F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686C8701F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift */; };
@@ -42,6 +45,9 @@
 		40C1862E310E562824E4C37E /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		81679C9CBFD56E434FDDD9AF /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AC81D2F91F89AD6A00A10C4B /* JJMeNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJMeNavView.swift; sourceTree = "<group>"; };
+		D65C6F211F8B64B5000A9F7E /* JJGuideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJGuideView.swift; sourceTree = "<group>"; };
+		D65C6F241F8B7002000A9F7E /* JJLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJLogViewController.swift; sourceTree = "<group>"; };
+		D65C6F251F8B7002000A9F7E /* JJLogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJLogViewController.xib; sourceTree = "<group>"; };
 		D686C86E1F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJGuanJiaCollectionViewCell.swift; sourceTree = "<group>"; };
 		D686C86F1F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJGuanJiaCollectionViewCell.xib; sourceTree = "<group>"; };
 		D686C8701F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJHomeBannerCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 				D69A41811F7B461800F363BB /* ShangJia */,
 				D69A41821F7B461800F363BB /* Shop */,
 				D69A41831F7B461800F363BB /* Tools */,
+				D6C751BF1F8B260500D39C22 /* Utils */,
 				D69A416A1F7B3C6B00F363BB /* AppDelegate.swift */,
 				D69A416C1F7B3C6B00F363BB /* ViewController.swift */,
 				D69A41711F7B3C6B00F363BB /* Assets.xcassets */,
@@ -227,6 +234,16 @@
 				D69A41A01F7B9BE200F363BB /* PCHFile.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		D6C751BF1F8B260500D39C22 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D65C6F211F8B64B5000A9F7E /* JJGuideView.swift */,
+				D65C6F241F8B7002000A9F7E /* JJLogViewController.swift */,
+				D65C6F251F8B7002000A9F7E /* JJLogViewController.xib */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		FBA9F2AF8F4A52BBA261FCF5 /* Frameworks */ = {
@@ -308,6 +325,7 @@
 				D6FA5BEB1F7F865A00C08659 /* JJBottomADCollectionViewCell.xib in Resources */,
 				D686C8791F7C9926002FCAFA /* JJTitleCollectionReusableView.xib in Resources */,
 				D69A41751F7B3C6B00F363BB /* LaunchScreen.storyboard in Resources */,
+				D65C6F271F8B7002000A9F7E /* JJLogViewController.xib in Resources */,
 				D69A41721F7B3C6B00F363BB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,7 +345,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6EB519218C6CD9DDEAB04D96 /* [CP] Embed Pods Frameworks */ = {
@@ -381,6 +399,8 @@
 				D69A41951F7B699700F363BB /* JJShopViewController.swift in Sources */,
 				D69A416B1F7B3C6B00F363BB /* AppDelegate.swift in Sources */,
 				D69A41991F7B7C5200F363BB /* JJqqqqViewController.swift in Sources */,
+				D65C6F231F8B64B5000A9F7E /* JJGuideView.swift in Sources */,
+				D65C6F261F8B7002000A9F7E /* JJLogViewController.swift in Sources */,
 				D6FA5BE61F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift in Sources */,
 				D69A41A11F7B9BE200F363BB /* PCHFile.swift in Sources */,
 				D69A41871F7B4A0A00F363BB /* JJTabBarViewController.swift in Sources */,
@@ -510,6 +530,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.anbn.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -524,6 +545,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.anbn.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

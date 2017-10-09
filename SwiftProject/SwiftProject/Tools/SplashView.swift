@@ -172,9 +172,9 @@ import UIKit
         
         UserDefaults.standard.setValue(imgUrl, forKey: IMG_URL)
         UserDefaults.standard.setValue(actUrl, forKey: ACT_URL)
-        UserDefaults.standard.synchronize()
+        UserDefaults.standard.synchronize()        
         
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.background).async(execute: {
+        DispatchQueue.global().async { 
             let imageURL = URL(string: imgUrl!)
             if let _imageURL = imageURL {
                 let data = try? Data(contentsOf: _imageURL)
@@ -186,6 +186,8 @@ import UIKit
                 }
                 
             }
-        })
+        }
+        
+        
     }
 }

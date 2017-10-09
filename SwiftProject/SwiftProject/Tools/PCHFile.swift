@@ -13,6 +13,8 @@ import UIKit
 public let Screen_Width = UIScreen.main.bounds.size.width
 public let Screen_Height = UIScreen.main.bounds.size.height
 public let KTabbar_Height:CGFloat = 49.0
+public let isLogin:String = "isLogin"
+
 
 //获取视图尺寸
 public func VIEW_WIDTH(view:UIView)->CGFloat{
@@ -22,9 +24,30 @@ public func VIEW_HEIGHT(view:UIView)->CGFloat{
     return view.frame.size.height
 }
 
+public func Screen_Frame() -> CGRect {
+    return CGRect(x: 0, y: 0, width: Screen_Width, height: Screen_Height)
+}
+
+func System_AppVersion() -> String {
+    let infoDic = Bundle.main.infoDictionary
+    let appVersion = infoDic?["CFBundleShortVersionString"]
+  return appVersion as! String
+}
+
+func System_AppBuildVersion() -> String {
+    let infoDic = Bundle.main.infoDictionary
+    let appBuildVersion = infoDic?["CFBundleVersion"]
+    return appBuildVersion as! String
+}
+
+func System_AppName() -> String {
+    let infoDic = Bundle.main.infoDictionary
+    let appName = infoDic?["CFBundleDisplayName"]
+    return appName as! String
+}
+
 //RGB转换
 func RGB(r:CGFloat,g:CGFloat,b:CGFloat) ->UIColor{
-    //
     return UIColor(red: r/225.0, green: g/225.0, blue: b/225.0, alpha: 1.0)
 }
 

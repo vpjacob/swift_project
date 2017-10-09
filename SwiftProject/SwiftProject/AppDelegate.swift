@@ -8,27 +8,28 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let url = URL(string: "http://xk.ppke.cn:9030/xk/appStartImg.do")
+    let imgUrlFront:String = "http://www.ppke.cn"
+    lazy var tabVC:JJTabBarViewController = JJTabBarViewController()
     
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        IQKeyboardManager.sharedManager().enable = true
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        
         window?.backgroundColor = UIColor.white
-        let tabVC = JJTabBarViewController()
-//        let nav = JJNavController(rootViewController: tabVC)
         window?.rootViewController = tabVC
-        
+        newVersion()
         showAdvertisment()
-        
         
         return true
     }
@@ -44,28 +45,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
             "Accept": "application/json"
         ]
-        
         Alamofire.request(url!, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers).response { (response) in
-            let string = String(data: response.data!, encoding: .utf8)
-            print(string!)
-    
+            let json = JSON(data: response.data!)
+            let imgUrl:String = json["data"][0]["imgUrl"].string ?? ""
+            if imgUrl.isEmpty{
+                return
+            }
+            SplashView.updateSplashData(self.imgUrlFront + imgUrl, actUrl: nil)
         }
         
-        
-
-//        Alamofire.request("https://httpbin.org/get").response { response in
-//            print("Request: \(String(describing: response.request))")
-//            print("Response: \(response.response)")
-//            print("Error: \(response.error)")
-//            response.error
-//            response.response
-//            response.data
-//            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-//                print("Data: \(utf8Text)")
-//            }
-//        }
-
-        
+    }
+    
+    func newVersion() {
+        let version:String = UserDefaults.standard.value(forKey: "version") as? String ?? ""
+        if !version.isEmpty  {//不是空
+            if System_AppVersion() == version {//相等  不做
+                
+            }else{
+                UserDefaults.standard.set(System_AppVersion(), forKey: "version")
+                window?.addSubview(JJGuideView(frame: CGRect(x: 0, y: 0, width: Screen_Width, height: Screen_Height)))
+            }
+            
+        }else{//是空
+            UserDefaults.standard.set(System_AppVersion(), forKey: "version")
+            window?.addSubview(JJGuideView(frame: CGRect(x: 0, y: 0, width: Screen_Width, height: Screen_Height)))
+        }
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

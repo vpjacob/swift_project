@@ -22,12 +22,15 @@ class JJGuanjiaViewController: JJBaseViewController,UICollectionViewDataSource,U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !UserDefaults.standard.bool(forKey: isLogin) {
+            self.present(JJLogViewController(), animated: true, completion: nil)
+        }
+        
         self.automaticallyAdjustsScrollViewInsets = false
         initData()
         self.view.addSubview(jjCollectionView)
 
-        
-        
         
     }
     

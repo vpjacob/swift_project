@@ -12,6 +12,9 @@ class JJShangJiaViewController: JJBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if !UserDefaults.standard.bool(forKey: isLogin) {
+            self.present(JJLogViewController(), animated: true, completion: nil)
+        }
         self.title = "商家"
         // Do any additional setup after loading the view.
     }

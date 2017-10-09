@@ -9,7 +9,7 @@ pod 'SwiftyJSON'
 pod 'Kingfisher'
 pod 'FSPagerView'
 pod 'DGElasticPullToRefresh'
-
+pod 'IQKeyboardManagerSwift'
 
   # Pods for SwiftProject
 

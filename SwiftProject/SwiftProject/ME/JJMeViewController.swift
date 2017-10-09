@@ -36,7 +36,9 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if !UserDefaults.standard.bool(forKey: isLogin) {
+            self.present(JJLogViewController(), animated: true, completion: nil)
+        }
         self.automaticallyAdjustsScrollViewInsets = false
         initData()
         let leftImage = UIImage(named: "me_more@2x")
@@ -166,7 +168,7 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
         flowLayout.minimumLineSpacing = 2
         flowLayout.minimumInteritemSpacing = 0
         
-        let rect = CGRect(x: 0, y: -20, width: Screen_Width, height: Screen_Height - KTabbar_Height)
+        let rect = CGRect(x: 0, y: -20, width: Screen_Width, height: Screen_Height - KTabbar_Height + 20)
         let collectionView = UICollectionView(frame: rect, collectionViewLayout: flowLayout)
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
