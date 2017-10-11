@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="U6b-Vx-4bR" customClass="JJHomeWeatherSectionHeaderView" customModule="SwiftProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="319"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pS8-jx-7Gv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="319"/>
+                </scrollView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-Jb-EmS">
+                    <rect key="frame" x="22" y="100" width="65.5" height="50.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMt-be-N0L">
+                    <rect key="frame" x="325" y="110" width="22" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="home_lock"/>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="pS8-jx-7Gv" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="6SF-fN-4uR"/>
+                <constraint firstItem="aG7-Jb-EmS" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="100" id="DlE-lf-vLX"/>
+                <constraint firstAttribute="trailing" secondItem="pS8-jx-7Gv" secondAttribute="trailing" id="IQM-ZG-Cqw"/>
+                <constraint firstAttribute="bottom" secondItem="pS8-jx-7Gv" secondAttribute="bottom" id="KkV-t7-nC0"/>
+                <constraint firstItem="aG7-Jb-EmS" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="22" id="bCj-i2-255"/>
+                <constraint firstItem="pS8-jx-7Gv" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="teJ-Ka-P86"/>
+            </constraints>
+            <connections>
+                <outlet property="scrollView" destination="pS8-jx-7Gv" id="IEe-L8-WBc"/>
+            </connections>
+            <point key="canvasLocation" x="-56.5" y="-28.5"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="home_lock" width="22" height="30"/>
+    </resources>
+</document>

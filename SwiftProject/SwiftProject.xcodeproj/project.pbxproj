@@ -20,9 +20,16 @@
 		D686C8791F7C9926002FCAFA /* JJTitleCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D686C8731F7C9926002FCAFA /* JJTitleCollectionReusableView.xib */; };
 		D686C87D1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686C87B1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.swift */; };
 		D686C87E1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D686C87C1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.xib */; };
+		D68CFC0F1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CFC0D1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.swift */; };
+		D68CFC101F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68CFC0E1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.xib */; };
+		D68CFC151F8CCCDA005697F2 /* JJHomeBannerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CFC131F8CCCDA005697F2 /* JJHomeBannerHeaderView.swift */; };
+		D68CFC161F8CCCDA005697F2 /* JJHomeBannerHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68CFC141F8CCCDA005697F2 /* JJHomeBannerHeaderView.xib */; };
+		D68CFC191F8CD61C005697F2 /* JJHomeSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CFC171F8CD61C005697F2 /* JJHomeSectionHeaderView.swift */; };
+		D68CFC1A1F8CD61C005697F2 /* JJHomeSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68CFC181F8CD61C005697F2 /* JJHomeSectionHeaderView.xib */; };
+		D68CFC1D1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CFC1B1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift */; };
+		D68CFC1E1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68CFC1C1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib */; };
+		D69356611F8DAF9400C9756B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69356601F8DAF9400C9756B /* Media.xcassets */; };
 		D69A416B1F7B3C6B00F363BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A416A1F7B3C6B00F363BB /* AppDelegate.swift */; };
-		D69A416D1F7B3C6B00F363BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A416C1F7B3C6B00F363BB /* ViewController.swift */; };
-		D69A41721F7B3C6B00F363BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69A41711F7B3C6B00F363BB /* Assets.xcassets */; };
 		D69A41751F7B3C6B00F363BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A41731F7B3C6B00F363BB /* LaunchScreen.storyboard */; };
 		D69A41851F7B461800F363BB /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A41841F7B461800F363BB /* SplashView.swift */; };
 		D69A41871F7B4A0A00F363BB /* JJTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A41861F7B4A0A00F363BB /* JJTabBarViewController.swift */; };
@@ -56,10 +63,17 @@
 		D686C8731F7C9926002FCAFA /* JJTitleCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJTitleCollectionReusableView.xib; sourceTree = "<group>"; };
 		D686C87B1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJMeHeaderSectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		D686C87C1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJMeHeaderSectionCollectionViewCell.xib; sourceTree = "<group>"; };
+		D68CFC0D1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJHomeWeatherSectionHeaderView.swift; sourceTree = "<group>"; };
+		D68CFC0E1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJHomeWeatherSectionHeaderView.xib; sourceTree = "<group>"; };
+		D68CFC131F8CCCDA005697F2 /* JJHomeBannerHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJHomeBannerHeaderView.swift; sourceTree = "<group>"; };
+		D68CFC141F8CCCDA005697F2 /* JJHomeBannerHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJHomeBannerHeaderView.xib; sourceTree = "<group>"; };
+		D68CFC171F8CD61C005697F2 /* JJHomeSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJHomeSectionHeaderView.swift; sourceTree = "<group>"; };
+		D68CFC181F8CD61C005697F2 /* JJHomeSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJHomeSectionHeaderView.xib; sourceTree = "<group>"; };
+		D68CFC1B1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJImgViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		D68CFC1C1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJImgViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		D69356601F8DAF9400C9756B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		D69A41671F7B3C6B00F363BB /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69A416A1F7B3C6B00F363BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D69A416C1F7B3C6B00F363BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D69A41711F7B3C6B00F363BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D69A41741F7B3C6B00F363BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D69A41761F7B3C6B00F363BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D69A41841F7B461800F363BB /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -128,6 +142,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D68CFC0C1F8CA24F005697F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D68CFC0D1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.swift */,
+				D68CFC0E1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.xib */,
+				D68CFC131F8CCCDA005697F2 /* JJHomeBannerHeaderView.swift */,
+				D68CFC141F8CCCDA005697F2 /* JJHomeBannerHeaderView.xib */,
+				D68CFC171F8CD61C005697F2 /* JJHomeSectionHeaderView.swift */,
+				D68CFC181F8CD61C005697F2 /* JJHomeSectionHeaderView.xib */,
+				D68CFC1B1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift */,
+				D68CFC1C1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D69A415E1F7B3C6A00F363BB = {
 			isa = PBXGroup;
 			children = (
@@ -159,10 +188,9 @@
 				D69A41831F7B461800F363BB /* Tools */,
 				D6C751BF1F8B260500D39C22 /* Utils */,
 				D69A416A1F7B3C6B00F363BB /* AppDelegate.swift */,
-				D69A416C1F7B3C6B00F363BB /* ViewController.swift */,
-				D69A41711F7B3C6B00F363BB /* Assets.xcassets */,
 				D69A41731F7B3C6B00F363BB /* LaunchScreen.storyboard */,
 				D69A41761F7B3C6B00F363BB /* Info.plist */,
+				D69356601F8DAF9400C9756B /* Media.xcassets */,
 			);
 			path = SwiftProject;
 			sourceTree = "<group>";
@@ -190,6 +218,7 @@
 		D69A417E1F7B461800F363BB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D68CFC0C1F8CA24F005697F2 /* Views */,
 				D69A418E1F7B697300F363BB /* JJHomeViewController.swift */,
 			);
 			path = Home;
@@ -320,13 +349,17 @@
 			files = (
 				D686C8771F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.xib in Resources */,
 				D686C87E1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.xib in Resources */,
+				D69356611F8DAF9400C9756B /* Media.xcassets in Resources */,
 				D686C8751F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib in Resources */,
 				D6FA5BE71F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib in Resources */,
+				D68CFC1E1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib in Resources */,
 				D6FA5BEB1F7F865A00C08659 /* JJBottomADCollectionViewCell.xib in Resources */,
+				D68CFC101F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.xib in Resources */,
+				D68CFC1A1F8CD61C005697F2 /* JJHomeSectionHeaderView.xib in Resources */,
 				D686C8791F7C9926002FCAFA /* JJTitleCollectionReusableView.xib in Resources */,
 				D69A41751F7B3C6B00F363BB /* LaunchScreen.storyboard in Resources */,
+				D68CFC161F8CCCDA005697F2 /* JJHomeBannerHeaderView.xib in Resources */,
 				D65C6F271F8B7002000A9F7E /* JJLogViewController.xib in Resources */,
-				D69A41721F7B3C6B00F363BB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,15 +422,18 @@
 				D69A41891F7B4A2900F363BB /* JJNavController.swift in Sources */,
 				D69A418F1F7B697300F363BB /* JJHomeViewController.swift in Sources */,
 				D69A41911F7B697C00F363BB /* JJMeViewController.swift in Sources */,
+				D68CFC1D1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift in Sources */,
 				D69A418B1F7B690D00F363BB /* JJBaseViewController.swift in Sources */,
+				D68CFC151F8CCCDA005697F2 /* JJHomeBannerHeaderView.swift in Sources */,
 				D69A418D1F7B696700F363BB /* JJGuanjiaViewController.swift in Sources */,
-				D69A416D1F7B3C6B00F363BB /* ViewController.swift in Sources */,
 				D686C87D1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.swift in Sources */,
+				D68CFC0F1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.swift in Sources */,
 				D686C8761F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift in Sources */,
 				D686C8741F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift in Sources */,
 				AC81D2FA1F89AD6B00A10C4B /* JJMeNavView.swift in Sources */,
 				D69A41951F7B699700F363BB /* JJShopViewController.swift in Sources */,
 				D69A416B1F7B3C6B00F363BB /* AppDelegate.swift in Sources */,
+				D68CFC191F8CD61C005697F2 /* JJHomeSectionHeaderView.swift in Sources */,
 				D69A41991F7B7C5200F363BB /* JJqqqqViewController.swift in Sources */,
 				D65C6F231F8B64B5000A9F7E /* JJGuideView.swift in Sources */,
 				D65C6F261F8B7002000A9F7E /* JJLogViewController.swift in Sources */,

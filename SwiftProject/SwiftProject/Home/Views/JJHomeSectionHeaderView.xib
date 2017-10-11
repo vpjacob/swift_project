@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="JJHomeSectionHeaderView" customModule="SwiftProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="38"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaR-oJ-QFN">
+                    <rect key="frame" x="5" y="11.5" width="3" height="15"/>
+                    <color key="backgroundColor" red="0.45439139891439473" green="0.32237851426220088" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="3" id="NXT-Qf-jeC"/>
+                        <constraint firstAttribute="height" constant="15" id="SUp-V7-FYq"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美食" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5n-m6-byL">
+                    <rect key="frame" x="18" y="9" width="35" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="S5n-m6-byL" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="MgB-wq-CG8"/>
+                <constraint firstItem="S5n-m6-byL" firstAttribute="leading" secondItem="XaR-oJ-QFN" secondAttribute="trailing" constant="10" id="O6V-fc-4a4"/>
+                <constraint firstItem="XaR-oJ-QFN" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="5" id="d0u-Of-9M8"/>
+                <constraint firstItem="XaR-oJ-QFN" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="i07-83-aZg"/>
+            </constraints>
+            <connections>
+                <outlet property="titleLabel" destination="S5n-m6-byL" id="MTh-5A-Zbp"/>
+                <outlet property="titleView" destination="XaR-oJ-QFN" id="bG0-c7-GI2"/>
+            </connections>
+            <point key="canvasLocation" x="-144.5" y="-68"/>
+        </collectionReusableView>
+    </objects>
+</document>
