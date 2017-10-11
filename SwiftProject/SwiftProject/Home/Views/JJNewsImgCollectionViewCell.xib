@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JJNewsImgCollectionViewCell" customModule="SwiftProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="117"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="372" height="117"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHE-2e-Dne">
+                        <rect key="frame" x="0.0" y="0.0" width="372" height="0.5"/>
+                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Idr-I6-JH1"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="即可立即打开链接打开链接打开链接打开链接打开连接到路口见到了空间打开链接打开链接打开了" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RA3-N2-dVK">
+                        <rect key="frame" x="0.0" y="21" width="262" height="53"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_xw" translatesAutoresizingMaskIntoConstraints="NO" id="8GG-wj-t6k">
+                        <rect key="frame" x="262" y="23.5" width="110" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="110" id="XuO-ix-mfv"/>
+                            <constraint firstAttribute="height" constant="70" id="yus-io-heg"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmG-9E-DMH">
+                        <rect key="frame" x="0.0" y="85" width="31" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="8Mi-iG-eCe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="最新" backgroundImage="home_zx"/>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3xk-zX-bnx">
+                        <rect key="frame" x="0.0" y="116.5" width="372" height="0.5"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="trp-3C-FrR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="fHE-2e-Dne" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0ZU-hs-WAv"/>
+                <constraint firstItem="8GG-wj-t6k" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="3oF-yV-xOs"/>
+                <constraint firstItem="QmG-9E-DMH" firstAttribute="top" secondItem="RA3-N2-dVK" secondAttribute="bottom" constant="11" id="5VM-wZ-eyj"/>
+                <constraint firstItem="3xk-zX-bnx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8rn-pB-mVp"/>
+                <constraint firstItem="fHE-2e-Dne" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CF7-9G-urk"/>
+                <constraint firstAttribute="trailing" secondItem="3xk-zX-bnx" secondAttribute="trailing" id="EEt-ne-K6v"/>
+                <constraint firstAttribute="bottom" secondItem="3xk-zX-bnx" secondAttribute="bottom" id="EHf-Kp-EPr"/>
+                <constraint firstItem="RA3-N2-dVK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="N84-Ge-azz"/>
+                <constraint firstAttribute="bottom" secondItem="QmG-9E-DMH" secondAttribute="bottom" constant="10" id="Phm-yA-JWZ"/>
+                <constraint firstAttribute="trailing" secondItem="fHE-2e-Dne" secondAttribute="trailing" id="VbH-Be-Wo1"/>
+                <constraint firstItem="8GG-wj-t6k" firstAttribute="leading" secondItem="RA3-N2-dVK" secondAttribute="trailing" id="sGJ-NR-muY"/>
+                <constraint firstItem="RA3-N2-dVK" firstAttribute="top" secondItem="fHE-2e-Dne" secondAttribute="bottom" constant="20" id="t9c-y9-aok"/>
+                <constraint firstAttribute="trailing" secondItem="8GG-wj-t6k" secondAttribute="trailing" id="u2m-XK-w5o"/>
+                <constraint firstItem="QmG-9E-DMH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yPm-LT-okR"/>
+            </constraints>
+            <size key="customSize" width="372" height="117"/>
+            <connections>
+                <outlet property="imageView" destination="8GG-wj-t6k" id="CSQ-lW-wGd"/>
+                <outlet property="titleLabel" destination="RA3-N2-dVK" id="fHO-77-efD"/>
+            </connections>
+            <point key="canvasLocation" x="-127" y="20.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_xw" width="110" height="70"/>
+        <image name="home_zx" width="30" height="19"/>
+    </resources>
+</document>

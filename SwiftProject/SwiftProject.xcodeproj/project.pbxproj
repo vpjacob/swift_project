@@ -12,6 +12,13 @@
 		D65C6F231F8B64B5000A9F7E /* JJGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C6F211F8B64B5000A9F7E /* JJGuideView.swift */; };
 		D65C6F261F8B7002000A9F7E /* JJLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C6F241F8B7002000A9F7E /* JJLogViewController.swift */; };
 		D65C6F271F8B7002000A9F7E /* JJLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65C6F251F8B7002000A9F7E /* JJLogViewController.xib */; };
+		D6625C4D1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6625C4B1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.swift */; };
+		D6625C4E1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6625C4C1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib */; };
+		D6625C511F8DE969001491C9 /* JJNewsImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6625C4F1F8DE969001491C9 /* JJNewsImgCollectionViewCell.swift */; };
+		D6625C521F8DE969001491C9 /* JJNewsImgCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6625C501F8DE969001491C9 /* JJNewsImgCollectionViewCell.xib */; };
+		D6625C551F8DE980001491C9 /* JJNewsTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6625C531F8DE980001491C9 /* JJNewsTitleCollectionViewCell.swift */; };
+		D6625C561F8DE980001491C9 /* JJNewsTitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6625C541F8DE980001491C9 /* JJNewsTitleCollectionViewCell.xib */; };
+		D6625C581F8DFC5C001491C9 /* JJHomeNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6625C571F8DFC5C001491C9 /* JJHomeNav.swift */; };
 		D686C8741F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686C86E1F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift */; };
 		D686C8751F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D686C86F1F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib */; };
 		D686C8761F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686C8701F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift */; };
@@ -20,6 +27,7 @@
 		D686C8791F7C9926002FCAFA /* JJTitleCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D686C8731F7C9926002FCAFA /* JJTitleCollectionReusableView.xib */; };
 		D686C87D1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D686C87B1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.swift */; };
 		D686C87E1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D686C87C1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.xib */; };
+		D689FF131F8E2147004A4AF8 /* JJShangjiaNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = D689FF121F8E2147004A4AF8 /* JJShangjiaNav.swift */; };
 		D68CFC0F1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CFC0D1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.swift */; };
 		D68CFC101F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68CFC0E1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.xib */; };
 		D68CFC151F8CCCDA005697F2 /* JJHomeBannerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CFC131F8CCCDA005697F2 /* JJHomeBannerHeaderView.swift */; };
@@ -55,6 +63,13 @@
 		D65C6F211F8B64B5000A9F7E /* JJGuideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJGuideView.swift; sourceTree = "<group>"; };
 		D65C6F241F8B7002000A9F7E /* JJLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJLogViewController.swift; sourceTree = "<group>"; };
 		D65C6F251F8B7002000A9F7E /* JJLogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJLogViewController.xib; sourceTree = "<group>"; };
+		D6625C4B1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJImgViewTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6625C4C1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJImgViewTitleCollectionViewCell.xib; sourceTree = "<group>"; };
+		D6625C4F1F8DE969001491C9 /* JJNewsImgCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJNewsImgCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6625C501F8DE969001491C9 /* JJNewsImgCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJNewsImgCollectionViewCell.xib; sourceTree = "<group>"; };
+		D6625C531F8DE980001491C9 /* JJNewsTitleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJNewsTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6625C541F8DE980001491C9 /* JJNewsTitleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJNewsTitleCollectionViewCell.xib; sourceTree = "<group>"; };
+		D6625C571F8DFC5C001491C9 /* JJHomeNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJHomeNav.swift; sourceTree = "<group>"; };
 		D686C86E1F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJGuanJiaCollectionViewCell.swift; sourceTree = "<group>"; };
 		D686C86F1F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJGuanJiaCollectionViewCell.xib; sourceTree = "<group>"; };
 		D686C8701F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJHomeBannerCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -63,6 +78,7 @@
 		D686C8731F7C9926002FCAFA /* JJTitleCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJTitleCollectionReusableView.xib; sourceTree = "<group>"; };
 		D686C87B1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJMeHeaderSectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		D686C87C1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJMeHeaderSectionCollectionViewCell.xib; sourceTree = "<group>"; };
+		D689FF121F8E2147004A4AF8 /* JJShangjiaNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJShangjiaNav.swift; sourceTree = "<group>"; };
 		D68CFC0D1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJHomeWeatherSectionHeaderView.swift; sourceTree = "<group>"; };
 		D68CFC0E1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJHomeWeatherSectionHeaderView.xib; sourceTree = "<group>"; };
 		D68CFC131F8CCCDA005697F2 /* JJHomeBannerHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJHomeBannerHeaderView.swift; sourceTree = "<group>"; };
@@ -142,6 +158,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D689FF111F8E2117004A4AF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D689FF121F8E2147004A4AF8 /* JJShangjiaNav.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D68CFC0C1F8CA24F005697F2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +177,13 @@
 				D68CFC181F8CD61C005697F2 /* JJHomeSectionHeaderView.xib */,
 				D68CFC1B1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift */,
 				D68CFC1C1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib */,
+				D6625C4B1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.swift */,
+				D6625C4C1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib */,
+				D6625C4F1F8DE969001491C9 /* JJNewsImgCollectionViewCell.swift */,
+				D6625C501F8DE969001491C9 /* JJNewsImgCollectionViewCell.xib */,
+				D6625C531F8DE980001491C9 /* JJNewsTitleCollectionViewCell.swift */,
+				D6625C541F8DE980001491C9 /* JJNewsTitleCollectionViewCell.xib */,
+				D6625C571F8DFC5C001491C9 /* JJHomeNav.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +274,7 @@
 		D69A41811F7B461800F363BB /* ShangJia */ = {
 			isa = PBXGroup;
 			children = (
+				D689FF111F8E2117004A4AF8 /* Views */,
 				D69A41921F7B698C00F363BB /* JJShangJiaViewController.swift */,
 			);
 			path = ShangJia;
@@ -351,12 +383,15 @@
 				D686C87E1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.xib in Resources */,
 				D69356611F8DAF9400C9756B /* Media.xcassets in Resources */,
 				D686C8751F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib in Resources */,
+				D6625C561F8DE980001491C9 /* JJNewsTitleCollectionViewCell.xib in Resources */,
 				D6FA5BE71F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib in Resources */,
 				D68CFC1E1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib in Resources */,
 				D6FA5BEB1F7F865A00C08659 /* JJBottomADCollectionViewCell.xib in Resources */,
 				D68CFC101F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.xib in Resources */,
 				D68CFC1A1F8CD61C005697F2 /* JJHomeSectionHeaderView.xib in Resources */,
 				D686C8791F7C9926002FCAFA /* JJTitleCollectionReusableView.xib in Resources */,
+				D6625C521F8DE969001491C9 /* JJNewsImgCollectionViewCell.xib in Resources */,
+				D6625C4E1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib in Resources */,
 				D69A41751F7B3C6B00F363BB /* LaunchScreen.storyboard in Resources */,
 				D68CFC161F8CCCDA005697F2 /* JJHomeBannerHeaderView.xib in Resources */,
 				D65C6F271F8B7002000A9F7E /* JJLogViewController.xib in Resources */,
@@ -426,16 +461,21 @@
 				D69A418B1F7B690D00F363BB /* JJBaseViewController.swift in Sources */,
 				D68CFC151F8CCCDA005697F2 /* JJHomeBannerHeaderView.swift in Sources */,
 				D69A418D1F7B696700F363BB /* JJGuanjiaViewController.swift in Sources */,
+				D6625C551F8DE980001491C9 /* JJNewsTitleCollectionViewCell.swift in Sources */,
 				D686C87D1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.swift in Sources */,
 				D68CFC0F1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.swift in Sources */,
 				D686C8761F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift in Sources */,
+				D6625C581F8DFC5C001491C9 /* JJHomeNav.swift in Sources */,
 				D686C8741F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift in Sources */,
+				D689FF131F8E2147004A4AF8 /* JJShangjiaNav.swift in Sources */,
 				AC81D2FA1F89AD6B00A10C4B /* JJMeNavView.swift in Sources */,
 				D69A41951F7B699700F363BB /* JJShopViewController.swift in Sources */,
 				D69A416B1F7B3C6B00F363BB /* AppDelegate.swift in Sources */,
 				D68CFC191F8CD61C005697F2 /* JJHomeSectionHeaderView.swift in Sources */,
 				D69A41991F7B7C5200F363BB /* JJqqqqViewController.swift in Sources */,
 				D65C6F231F8B64B5000A9F7E /* JJGuideView.swift in Sources */,
+				D6625C4D1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.swift in Sources */,
+				D6625C511F8DE969001491C9 /* JJNewsImgCollectionViewCell.swift in Sources */,
 				D65C6F261F8B7002000A9F7E /* JJLogViewController.swift in Sources */,
 				D6FA5BE61F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift in Sources */,
 				D69A41A11F7B9BE200F363BB /* PCHFile.swift in Sources */,
@@ -563,7 +603,7 @@
 				DEVELOPMENT_TEAM = HN2F9US93L;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anbn.SwiftProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpjacob.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -578,7 +618,7 @@
 				DEVELOPMENT_TEAM = HN2F9US93L;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anbn.SwiftProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpjacob.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

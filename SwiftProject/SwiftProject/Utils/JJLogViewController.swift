@@ -10,10 +10,10 @@ import UIKit
 
 class JJLogViewController: UIViewController {
 
-//    @IBAction func loginClickAction(_ sender: Any) {
-//        self.dismiss(animated: true, completion: nil)
-//        UserDefaults.standard.setValue(true, forKey: isLogin)
-//    }
+    @IBAction func loginClickAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        UserDefaults.standard.setValue(true, forKey: isLogin)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

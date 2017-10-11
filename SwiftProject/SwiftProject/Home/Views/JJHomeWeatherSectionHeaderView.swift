@@ -20,7 +20,7 @@ class JJHomeWeatherSectionHeaderView: UICollectionReusableView {
         
         for i in 1...2{
             let imageView = UIImageView(frame: CGRect(x: CGFloat(i-1)*Screen_Width, y: 0, width: Screen_Width, height: self.bounds.size.height))
-//            imageView.isUserInteractionEnabled = true
+            
             imageView.image = UIImage(named: "home_duang" + i.description)
             scrollView.addSubview(imageView)
         }

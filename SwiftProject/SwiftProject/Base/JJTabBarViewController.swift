@@ -32,7 +32,7 @@ class JJTabBarViewController: UITabBarController {
         initViewControllers(VC: HomeVC!, title: "", iconString: "home")
         initViewControllers(VC: ShopVC!, title: "商城", iconString: "shop")
         initViewControllers(VC: MeVC!, title: "我的", iconString: "me")
-        self.selectedIndex = 2
+        self.selectedIndex = 1
 //        self.viewControllers = [GuanjiaVC!,ShangJiaVC!,HomeVC!,ShopVC!,MeVC!]
         
     }

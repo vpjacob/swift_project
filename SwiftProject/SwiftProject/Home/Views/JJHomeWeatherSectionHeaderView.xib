@@ -12,11 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="U6b-Vx-4bR" customClass="JJHomeWeatherSectionHeaderView" customModule="SwiftProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="319"/>
+            <rect key="frame" x="0.0" y="0.0" width="530" height="319"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pS8-jx-7Gv">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="319"/>
+                    <rect key="frame" x="0.0" y="0.0" width="530" height="319"/>
                 </scrollView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-Jb-EmS">
                     <rect key="frame" x="22" y="100" width="65.5" height="50.5"/>
@@ -41,7 +41,7 @@
             <connections>
                 <outlet property="scrollView" destination="pS8-jx-7Gv" id="IEe-L8-WBc"/>
             </connections>
-            <point key="canvasLocation" x="-56.5" y="-28.5"/>
+            <point key="canvasLocation" x="21" y="-28.5"/>
         </collectionReusableView>
     </objects>
     <resources>

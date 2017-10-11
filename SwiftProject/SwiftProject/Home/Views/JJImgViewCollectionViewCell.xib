@@ -18,16 +18,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="277" height="209"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cx2-ul-sBo">
-                        <rect key="frame" x="48" y="27" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kx2-Ki-ReZ">
+                        <rect key="frame" x="0.0" y="0.0" width="277" height="209"/>
+                    </imageView>
                 </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="kx2-Ki-ReZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VAo-by-Kd2"/>
+                <constraint firstAttribute="bottom" secondItem="kx2-Ki-ReZ" secondAttribute="bottom" id="XL8-7q-lmW"/>
+                <constraint firstItem="kx2-Ki-ReZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eRv-fk-OLa"/>
+                <constraint firstAttribute="trailing" secondItem="kx2-Ki-ReZ" secondAttribute="trailing" id="gZ1-5x-1wt"/>
+            </constraints>
             <size key="customSize" width="277" height="209"/>
+            <connections>
+                <outlet property="imageView" destination="kx2-Ki-ReZ" id="n9A-KN-H2I"/>
+            </connections>
             <point key="canvasLocation" x="-79.5" y="-25.5"/>
         </collectionViewCell>
     </objects>
