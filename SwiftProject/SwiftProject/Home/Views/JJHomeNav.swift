@@ -11,6 +11,8 @@ import UIKit
 typealias leftBlock = () -> Void
 typealias rightBlock = () -> Void
 
+fileprivate let margin:CGFloat = 5.0
+fileprivate let padding:CGFloat = 12.0
 
 class JJHomeNav: UIView {
 

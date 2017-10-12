@@ -9,8 +9,8 @@
 import UIKit
 import FSPagerView
 
-let margin:CGFloat = 5.0
-let padding:CGFloat = 12.0
+fileprivate let margin:CGFloat = 5.0
+fileprivate let padding:CGFloat = 12.0
 
 class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 

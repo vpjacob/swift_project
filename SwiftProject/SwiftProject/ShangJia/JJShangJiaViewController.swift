@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+fileprivate let margin:CGFloat = 5.0
+fileprivate let padding:CGFloat = 12.0
 class JJShangJiaViewController: JJBaseViewController ,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
 
     override func viewDidLoad() {
@@ -39,10 +40,16 @@ class JJShangJiaViewController: JJBaseViewController ,UICollectionViewDelegate,U
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JJShangJiaTopCollectionViewCell", for: indexPath) as! JJShangJiaTopCollectionViewCell
+            
+            return cell
+        }
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         
         cell.backgroundColor = UIColor.red
@@ -65,6 +72,8 @@ class JJShangJiaViewController: JJBaseViewController ,UICollectionViewDelegate,U
         return margin
     }
     
+    
+    
     // MARK: - lazy
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
@@ -74,7 +83,7 @@ class JJShangJiaViewController: JJBaseViewController ,UICollectionViewDelegate,U
         collectionView.backgroundColor = UIColor.white
         
         
-        
+        collectionView.register(JJShangJiaTopCollectionViewCell.self, forCellWithReuseIdentifier: "JJShangJiaTopCollectionViewCell")
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         
         
