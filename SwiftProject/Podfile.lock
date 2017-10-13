@@ -4,6 +4,7 @@ PODS:
   - FSPagerView (0.5.5)
   - IQKeyboardManagerSwift (4.0.10)
   - Kingfisher (3.10.3)
+  - SnapKit (3.0.2)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - FSPagerView
   - IQKeyboardManagerSwift
   - Kingfisher
+  - SnapKit (~> 3.0.0)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -20,8 +22,9 @@ SPEC CHECKSUMS:
   FSPagerView: 3ec72e6b201d77a48adab5ed1d33b43a8cc153d6
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 77f8e68e593bbf04d146d2488cecfe058adcc2d3
+PODFILE CHECKSUM: 277759243744c082e13fb36cca8ebd93f3f70678
 
 COCOAPODS: 1.2.1

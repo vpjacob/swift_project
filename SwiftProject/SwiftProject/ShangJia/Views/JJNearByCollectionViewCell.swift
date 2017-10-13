@@ -10,6 +10,11 @@ import UIKit
 
 class JJNearByCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var saleCountLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -10,7 +10,7 @@ pod 'Kingfisher'
 pod 'FSPagerView'
 pod 'DGElasticPullToRefresh'
 pod 'IQKeyboardManagerSwift'
-
+pod 'SnapKit', '~> 3.0.0'
   # Pods for SwiftProject
 
 end

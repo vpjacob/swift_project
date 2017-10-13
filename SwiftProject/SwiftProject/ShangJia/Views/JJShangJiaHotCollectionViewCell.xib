@@ -1,19 +1,59 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JJShangJiaHotCollectionViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JJShangJiaHotCollectionViewCell" customModule="SwiftProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="195" height="151"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="195" height="151"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n2E-SR-ndK">
+                        <rect key="frame" x="0.0" y="0.0" width="195" height="72"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="72" id="VJ7-dv-uEc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ens-G1-nt2">
+                        <rect key="frame" x="0.0" y="80" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="品质招牌推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODQ-aP-0AF">
+                        <rect key="frame" x="0.0" y="104" width="61.5" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="ODQ-aP-0AF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5Ha-tG-veE"/>
+                <constraint firstItem="ODQ-aP-0AF" firstAttribute="top" secondItem="ens-G1-nt2" secondAttribute="bottom" constant="8" id="6UH-P7-2Sf"/>
+                <constraint firstItem="n2E-SR-ndK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Anf-TI-nJo"/>
+                <constraint firstAttribute="trailing" secondItem="n2E-SR-ndK" secondAttribute="trailing" id="Ch6-dW-Lag"/>
+                <constraint firstItem="ens-G1-nt2" firstAttribute="top" secondItem="n2E-SR-ndK" secondAttribute="bottom" constant="8" id="PhD-XJ-cdf"/>
+                <constraint firstItem="n2E-SR-ndK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YS9-0e-fFh"/>
+                <constraint firstItem="ens-G1-nt2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pNY-Jj-HbQ"/>
+            </constraints>
+            <size key="customSize" width="195" height="151"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="ODQ-aP-0AF" id="yfy-7A-dGe"/>
+                <outlet property="imageView" destination="n2E-SR-ndK" id="pEf-FN-Q0I"/>
+                <outlet property="titleLabel" destination="ens-G1-nt2" id="JfR-Za-bhG"/>
+            </connections>
+            <point key="canvasLocation" x="-195.5" y="5.5"/>
         </collectionViewCell>
     </objects>
 </document>

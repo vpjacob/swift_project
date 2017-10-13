@@ -7,17 +7,39 @@
 //
 
 import UIKit
+import SnapKit
 
 class JJShangjiaNav: UIView {
 
-    var leftBtn:UIButton = {
+    
+    
+   public var leftBtn:UIButton = {
        let btn = UIButton(type: UIButtonType.custom)
         
         btn.setImage(UIImage(named: "store_back"), for: .normal)
-        
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        btn.setTitle("北京", for: .normal)
+        btn.contentHorizontalAlignment = .left
+        btn.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
+        btn.sizeToFit()
         return btn
     }()
     
+
+    
+   public var searchBtn:UIButton = {
+        let btn = UIButton(type: UIButtonType.custom)
+        
+        btn.setBackgroundImage(UIImage(named: "store_RoundedRectangle1"), for: .normal)
+        btn.setImage(UIImage(named: "store_search"), for: .normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 11)
+        btn.setTitle("输入商家位置", for: .normal)
+        btn.contentHorizontalAlignment = .left
+        btn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+        btn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
+        btn.sizeToFit()
+        return btn
+    }()
     
     
     override init(frame: CGRect) {
@@ -30,7 +52,17 @@ class JJShangjiaNav: UIView {
     }
     
     func setupUI() {
-        
+        self.addSubview(leftBtn)
+        self.addSubview(searchBtn)
+        searchBtn.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 160, height: 30))
+            make.center.equalTo(CGPoint(x: Screen_Width * 0.5, y: 37))
+        }
+        leftBtn.snp.makeConstraints { (make) in
+            make.centerYWithinMargins.equalTo(5)
+            make.width.equalTo(Screen_Width * 0.5 - 90)
+            make.left.equalTo(5)
+        }
     }
 
 }

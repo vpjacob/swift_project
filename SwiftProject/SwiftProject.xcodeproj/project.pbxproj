@@ -38,6 +38,7 @@
 		D68CFC1E1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68CFC1C1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib */; };
 		D69356611F8DAF9400C9756B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69356601F8DAF9400C9756B /* Media.xcassets */; };
 		D695668F1F8F08080053343A /* JJShangJiaTopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695668E1F8F08080053343A /* JJShangJiaTopCollectionViewCell.swift */; };
+		D69566921F8F1C120053343A /* UIButton+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69566911F8F1C120053343A /* UIButton+Array.swift */; };
 		D69A416B1F7B3C6B00F363BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A416A1F7B3C6B00F363BB /* AppDelegate.swift */; };
 		D69A41751F7B3C6B00F363BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A41731F7B3C6B00F363BB /* LaunchScreen.storyboard */; };
 		D69A41851F7B461800F363BB /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A41841F7B461800F363BB /* SplashView.swift */; };
@@ -51,6 +52,16 @@
 		D69A41951F7B699700F363BB /* JJShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A41941F7B699700F363BB /* JJShopViewController.swift */; };
 		D69A41991F7B7C5200F363BB /* JJqqqqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A41981F7B7C5200F363BB /* JJqqqqViewController.swift */; };
 		D69A41A11F7B9BE200F363BB /* PCHFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A41A01F7B9BE200F363BB /* PCHFile.swift */; };
+		D6A14DD61F9060CE00DD6DDE /* JJShangJiaADCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14DD41F9060CE00DD6DDE /* JJShangJiaADCollectionViewCell.swift */; };
+		D6A14DD71F9060CE00DD6DDE /* JJShangJiaADCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14DD51F9060CE00DD6DDE /* JJShangJiaADCollectionViewCell.xib */; };
+		D6A14DDA1F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14DD81F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.swift */; };
+		D6A14DDB1F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14DD91F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.xib */; };
+		D6A14DDE1F90663300DD6DDE /* JJNearByCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14DDC1F90663300DD6DDE /* JJNearByCollectionViewCell.swift */; };
+		D6A14DDF1F90663300DD6DDE /* JJNearByCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14DDD1F90663300DD6DDE /* JJNearByCollectionViewCell.xib */; };
+		D6A14DE21F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14DE01F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.swift */; };
+		D6A14DE31F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14DE11F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.xib */; };
+		D6A14DE81F90A18000DD6DDE /* JJShangJiaHotHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14DE61F90A18000DD6DDE /* JJShangJiaHotHeaderView.swift */; };
+		D6A14DE91F90A18000DD6DDE /* JJShangJiaHotHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14DE71F90A18000DD6DDE /* JJShangJiaHotHeaderView.xib */; };
 		D6FA5BE61F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA5BE41F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift */; };
 		D6FA5BE71F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6FA5BE51F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib */; };
 		D6FA5BEA1F7F865A00C08659 /* JJBottomADCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA5BE81F7F865A00C08659 /* JJBottomADCollectionViewCell.swift */; };
@@ -90,6 +101,7 @@
 		D68CFC1C1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJImgViewCollectionViewCell.xib; sourceTree = "<group>"; };
 		D69356601F8DAF9400C9756B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		D695668E1F8F08080053343A /* JJShangJiaTopCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJShangJiaTopCollectionViewCell.swift; sourceTree = "<group>"; };
+		D69566911F8F1C120053343A /* UIButton+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Array.swift"; sourceTree = "<group>"; };
 		D69A41671F7B3C6B00F363BB /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69A416A1F7B3C6B00F363BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D69A41741F7B3C6B00F363BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,6 +117,16 @@
 		D69A41941F7B699700F363BB /* JJShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJShopViewController.swift; sourceTree = "<group>"; };
 		D69A41981F7B7C5200F363BB /* JJqqqqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJqqqqViewController.swift; sourceTree = "<group>"; };
 		D69A41A01F7B9BE200F363BB /* PCHFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCHFile.swift; sourceTree = "<group>"; };
+		D6A14DD41F9060CE00DD6DDE /* JJShangJiaADCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJShangJiaADCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6A14DD51F9060CE00DD6DDE /* JJShangJiaADCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJShangJiaADCollectionViewCell.xib; sourceTree = "<group>"; };
+		D6A14DD81F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJShangJiaHotCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6A14DD91F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJShangJiaHotCollectionViewCell.xib; sourceTree = "<group>"; };
+		D6A14DDC1F90663300DD6DDE /* JJNearByCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJNearByCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6A14DDD1F90663300DD6DDE /* JJNearByCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJNearByCollectionViewCell.xib; sourceTree = "<group>"; };
+		D6A14DE01F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJShangJiaFooterCollectionReusableView.swift; sourceTree = "<group>"; };
+		D6A14DE11F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJShangJiaFooterCollectionReusableView.xib; sourceTree = "<group>"; };
+		D6A14DE61F90A18000DD6DDE /* JJShangJiaHotHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJShangJiaHotHeaderView.swift; sourceTree = "<group>"; };
+		D6A14DE71F90A18000DD6DDE /* JJShangJiaHotHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJShangJiaHotHeaderView.xib; sourceTree = "<group>"; };
 		D6A577B15C32E80FF61AD020 /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FA5BE41F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJMeSectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		D6FA5BE51F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJMeSectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -165,6 +187,16 @@
 			children = (
 				D689FF121F8E2147004A4AF8 /* JJShangjiaNav.swift */,
 				D695668E1F8F08080053343A /* JJShangJiaTopCollectionViewCell.swift */,
+				D6A14DE01F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.swift */,
+				D6A14DE11F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.xib */,
+				D6A14DD41F9060CE00DD6DDE /* JJShangJiaADCollectionViewCell.swift */,
+				D6A14DD51F9060CE00DD6DDE /* JJShangJiaADCollectionViewCell.xib */,
+				D6A14DD81F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.swift */,
+				D6A14DD91F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.xib */,
+				D6A14DDC1F90663300DD6DDE /* JJNearByCollectionViewCell.swift */,
+				D6A14DDD1F90663300DD6DDE /* JJNearByCollectionViewCell.xib */,
+				D6A14DE61F90A18000DD6DDE /* JJShangJiaHotHeaderView.swift */,
+				D6A14DE71F90A18000DD6DDE /* JJShangJiaHotHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +223,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D69566901F8F1B150053343A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D69566911F8F1C120053343A /* UIButton+Array.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		D69A415E1F7B3C6A00F363BB = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				D69A417C1F7B461800F363BB /* Base */,
+				D69566901F8F1B150053343A /* Category */,
 				D69A417D1F7B461800F363BB /* GuanJia */,
 				D69A417E1F7B461800F363BB /* Home */,
 				D69A417F1F7B461800F363BB /* ME */,
@@ -383,15 +424,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D686C8771F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.xib in Resources */,
+				D6A14DDB1F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.xib in Resources */,
 				D686C87E1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.xib in Resources */,
 				D69356611F8DAF9400C9756B /* Media.xcassets in Resources */,
+				D6A14DE91F90A18000DD6DDE /* JJShangJiaHotHeaderView.xib in Resources */,
 				D686C8751F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib in Resources */,
+				D6A14DE31F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.xib in Resources */,
 				D6625C561F8DE980001491C9 /* JJNewsTitleCollectionViewCell.xib in Resources */,
 				D6FA5BE71F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib in Resources */,
 				D68CFC1E1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib in Resources */,
+				D6A14DD71F9060CE00DD6DDE /* JJShangJiaADCollectionViewCell.xib in Resources */,
 				D6FA5BEB1F7F865A00C08659 /* JJBottomADCollectionViewCell.xib in Resources */,
 				D68CFC101F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.xib in Resources */,
 				D68CFC1A1F8CD61C005697F2 /* JJHomeSectionHeaderView.xib in Resources */,
+				D6A14DDF1F90663300DD6DDE /* JJNearByCollectionViewCell.xib in Resources */,
 				D686C8791F7C9926002FCAFA /* JJTitleCollectionReusableView.xib in Resources */,
 				D6625C521F8DE969001491C9 /* JJNewsImgCollectionViewCell.xib in Resources */,
 				D6625C4E1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib in Resources */,
@@ -467,14 +513,19 @@
 				D695668F1F8F08080053343A /* JJShangJiaTopCollectionViewCell.swift in Sources */,
 				D6625C551F8DE980001491C9 /* JJNewsTitleCollectionViewCell.swift in Sources */,
 				D686C87D1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.swift in Sources */,
+				D6A14DE81F90A18000DD6DDE /* JJShangJiaHotHeaderView.swift in Sources */,
 				D68CFC0F1F8CA2AC005697F2 /* JJHomeWeatherSectionHeaderView.swift in Sources */,
+				D6A14DD61F9060CE00DD6DDE /* JJShangJiaADCollectionViewCell.swift in Sources */,
 				D686C8761F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift in Sources */,
 				D6625C581F8DFC5C001491C9 /* JJHomeNav.swift in Sources */,
 				D686C8741F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift in Sources */,
 				D689FF131F8E2147004A4AF8 /* JJShangjiaNav.swift in Sources */,
+				D6A14DE21F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.swift in Sources */,
 				AC81D2FA1F89AD6B00A10C4B /* JJMeNavView.swift in Sources */,
 				D69A41951F7B699700F363BB /* JJShopViewController.swift in Sources */,
 				D69A416B1F7B3C6B00F363BB /* AppDelegate.swift in Sources */,
+				D6A14DDE1F90663300DD6DDE /* JJNearByCollectionViewCell.swift in Sources */,
+				D69566921F8F1C120053343A /* UIButton+Array.swift in Sources */,
 				D68CFC191F8CD61C005697F2 /* JJHomeSectionHeaderView.swift in Sources */,
 				D69A41991F7B7C5200F363BB /* JJqqqqViewController.swift in Sources */,
 				D65C6F231F8B64B5000A9F7E /* JJGuideView.swift in Sources */,
@@ -483,6 +534,7 @@
 				D65C6F261F8B7002000A9F7E /* JJLogViewController.swift in Sources */,
 				D6FA5BE61F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift in Sources */,
 				D69A41A11F7B9BE200F363BB /* PCHFile.swift in Sources */,
+				D6A14DDA1F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.swift in Sources */,
 				D69A41871F7B4A0A00F363BB /* JJTabBarViewController.swift in Sources */,
 				D69A41851F7B461800F363BB /* SplashView.swift in Sources */,
 				D686C8781F7C9926002FCAFA /* JJTitleCollectionReusableView.swift in Sources */,
