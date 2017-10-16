@@ -21,8 +21,6 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
     // MARK: - nav
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:UIBarMetrics.default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
     }
@@ -97,20 +95,6 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.navigationController?.pushViewController(JJqqqqViewController(), animated: true)
     }
-
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let offsetY = scrollView.contentOffset.y
-//        if offsetY > 0 && offsetY <= 49 {
-//            self.navigationController?.navigationBar.backgroundColor = UIColor().hexStringToColor(hexString: "#ff602f").withAlphaComponent(offsetY/49)
-//        }else if (offsetY > 49){
-//            self.navigationController?.navigationBar.backgroundColor = UIColor().hexStringToColor(hexString: "#ff602f")
-//        }else{
-//            UIView.animate(withDuration: 0.1, animations: {
-//                self.navigationController?.navigationBar.backgroundColor?.withAlphaComponent(1)
-//            })
-//        }
-//
-//    }
     
    
     // MARK: - header&footer
@@ -123,8 +107,7 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
         }
         
         let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "cellFooter", for: indexPath)
-        footer.backgroundColor = UIColor.gray
-        
+        footer.backgroundColor = UIColor().hexStringToColor(hexString: "#efefef")
         return footer
     }
 
@@ -135,10 +118,10 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
             return CGSize(width: Screen_Width, height: 219)
         }
         else if(indexPath.section == 3){
-            return CGSize(width: (Screen_Width-20)/3, height: 72)
+            return CGSize(width: (Screen_Width - 20 - 14)/3, height: 72)
         }
         
-        return CGSize(width: Screen_Width * 0.25 - 1, height: 90)
+        return CGSize(width: Screen_Width * 0.25, height: 90)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -149,10 +132,18 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        if ( section == 3){
-            return CGSize.zero
-        }
         return CGSize(width: Screen_Width, height: 20)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if section == 3 {
+            return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        }
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat{
@@ -165,11 +156,8 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
     // MARK: - lazy var
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.minimumLineSpacing = 2
-        flowLayout.minimumInteritemSpacing = 0
         
-        let rect = CGRect(x: 0, y: -20, width: Screen_Width, height: Screen_Height - KTabbar_Height + 20)
-        let collectionView = UICollectionView(frame: rect, collectionViewLayout: flowLayout)
+        let collectionView = UICollectionView(frame: CGRect(x: 0, y: -20, width: Screen_Width, height: Screen_Height - KTabbar_Height + 20), collectionViewLayout: flowLayout)
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -180,8 +168,5 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
         collectionView.register(UINib.init(nibName: "JJMeSectionHeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "JJMeSectionHeaderCollectionReusableView")
         return collectionView
     }()
-    
-    
-   
 
 }

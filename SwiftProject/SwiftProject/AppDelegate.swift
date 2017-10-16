@@ -10,9 +10,10 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import IQKeyboardManagerSwift
+import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
 
     var window: UIWindow?
     let url = URL(string: "http://xk.ppke.cn:9030/xk/appStartImg.do")
@@ -21,7 +22,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // 通知注册实体类
+        let entity = JPUSHRegisterEntity()
+        entity.types = Int(JPAuthorizationOptions.alert.rawValue) |  Int(JPAuthorizationOptions.sound.rawValue) |  Int(JPAuthorizationOptions.badge.rawValue)
         
+        if #available(iOS 8.0, *) {
+            // 可以添加自定义categories
+            // NSSet<UNNotificationCategory *> *categories for iOS10 or later
+            // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
+
+        }
+        JPUSHService.register(forRemoteNotificationConfig: entity, delegate: self);
+        // 注册极光推送
+        JPUSHService.setup(withOption: launchOptions, appKey: "42beb58a8766a7aaf43f7971", channel:"App Store" , apsForProduction: false);
+        
+        
+        
+//        // 获取推送消息
+//        let remote = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? Dictionary<String,Any>;
+//        // 如果remote不为空，就代表应用在未打开的时候收到了推送消息
+//        if remote != nil {
+//            // 收到推送消息实现的方法
+//            self.perform(#selector(receivePush), with: remote, afterDelay: 1.0);
+//        }
+        
+
         IQKeyboardManager.sharedManager().enable = true
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -31,9 +56,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         newVersion()
         showAdvertisment()
         
+        
+        
         return true
     }
 
+    //注册APNs成功并上报DeviceToken
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        JPUSHService.registerDeviceToken(deviceToken)
+    }
+    
+    //实现注册APNs失败接口（可选）
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("did Fail To Register For Remote Notifications With Error:" + error.localizedDescription)
+    }
+    
+    @available(iOS 10.0, *)
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, willPresent notification: UNNotification!, withCompletionHandler completionHandler: ((Int) -> Void)!) {
+        
+        let userInfo = notification.request.content.userInfo;
+        if notification.request.trigger is UNPushNotificationTrigger {
+            JPUSHService.handleRemoteNotification(userInfo);
+        }
+        // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以选择设置
+        completionHandler(Int(UNNotificationPresentationOptions.alert.rawValue))
+    }
+    // 添加处理APNs通知回调方法
+    @available(iOS 10.0, *)
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, didReceive response: UNNotificationResponse!, withCompletionHandler completionHandler: (() -> Void)!) {
+        
+        let userInfo = response.notification.request.content.userInfo;
+        if response.notification.request.trigger is UNPushNotificationTrigger {
+            JPUSHService.handleRemoteNotification(userInfo);
+        }
+        completionHandler();
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        JPUSHService.handleRemoteNotification(userInfo);
+        completionHandler(UIBackgroundFetchResult.newData);
+    }
+
+
+    
     func showAdvertisment() {
         let defaultImage = UIImage(named: "ad_image.png")
         SplashView.showSplashView(defaultImage: defaultImage, tapSplashImageBlock: { (tapString) in
@@ -92,6 +158,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+    // MARK: - Core Data stack
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        /*
+         The persistent container for the application. This implementation
+         creates and returns a container, having loaded the store for the
+         application to it. This property is optional since there are legitimate
+         error conditions that could cause the creation of the store to fail.
+         */
+        let container = NSPersistentContainer(name: "Model")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                
+                /*
+                 Typical reasons for an error here include:
+                 * The parent directory does not exist, cannot be created, or disallows writing.
+                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
+                 * The device is out of space.
+                 * The store could not be migrated to the current model version.
+                 Check the error message to determine what the actual problem was.
+                 */
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+    
+    // MARK: - Core Data Saving support
+    
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
     }
 
 

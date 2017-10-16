@@ -30,7 +30,7 @@
                 <constraint firstAttribute="bottom" secondItem="aR3-af-Mxo" secondAttribute="bottom" constant="8" id="t2N-bc-wcw"/>
             </constraints>
             <size key="customSize" width="378" height="71"/>
-            <point key="canvasLocation" x="198" y="103.5"/>
+            <point key="canvasLocation" x="190" y="103"/>
         </collectionViewCell>
     </objects>
     <resources>

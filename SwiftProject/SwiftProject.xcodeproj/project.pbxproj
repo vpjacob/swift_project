@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		95B7F6830D9A68FB5A77BA93 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A577B15C32E80FF61AD020 /* Pods_SwiftProject.framework */; };
 		AC81D2FA1F89AD6B00A10C4B /* JJMeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81D2F91F89AD6A00A10C4B /* JJMeNavView.swift */; };
-		D65C6F231F8B64B5000A9F7E /* JJGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C6F211F8B64B5000A9F7E /* JJGuideView.swift */; };
-		D65C6F261F8B7002000A9F7E /* JJLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C6F241F8B7002000A9F7E /* JJLogViewController.swift */; };
-		D65C6F271F8B7002000A9F7E /* JJLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65C6F251F8B7002000A9F7E /* JJLogViewController.xib */; };
 		D6625C4D1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6625C4B1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.swift */; };
 		D6625C4E1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6625C4C1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib */; };
 		D6625C511F8DE969001491C9 /* JJNewsImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6625C4F1F8DE969001491C9 /* JJNewsImgCollectionViewCell.swift */; };
@@ -62,6 +59,26 @@
 		D6A14DE31F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14DE11F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.xib */; };
 		D6A14DE81F90A18000DD6DDE /* JJShangJiaHotHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14DE61F90A18000DD6DDE /* JJShangJiaHotHeaderView.swift */; };
 		D6A14DE91F90A18000DD6DDE /* JJShangJiaHotHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14DE71F90A18000DD6DDE /* JJShangJiaHotHeaderView.xib */; };
+		D6A1529B1F94629A00CDEA24 /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152961F94629A00CDEA24 /* jcore-ios-1.1.6.a */; };
+		D6A1529C1F94629A00CDEA24 /* jpush-extension-ios-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152971F94629A00CDEA24 /* jpush-extension-ios-1.0.0.a */; };
+		D6A1529D1F94629A00CDEA24 /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152981F94629A00CDEA24 /* jpush-ios-3.0.7.a */; };
+		D6A152A01F946CCE00CDEA24 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A1529F1F946CCE00CDEA24 /* CFNetwork.framework */; };
+		D6A152A21F946CDB00CDEA24 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152A11F946CDB00CDEA24 /* CoreFoundation.framework */; };
+		D6A152A41F946CE400CDEA24 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152A31F946CE400CDEA24 /* CoreTelephony.framework */; };
+		D6A152A61F946CEF00CDEA24 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152A51F946CEF00CDEA24 /* SystemConfiguration.framework */; };
+		D6A152A81F946CF700CDEA24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152A71F946CF700CDEA24 /* CoreGraphics.framework */; };
+		D6A152AA1F946D0400CDEA24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152A91F946D0400CDEA24 /* Foundation.framework */; };
+		D6A152AC1F946D0C00CDEA24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152AB1F946D0C00CDEA24 /* UIKit.framework */; };
+		D6A152AE1F946D1300CDEA24 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152AD1F946D1300CDEA24 /* Security.framework */; };
+		D6A152B01F946D2C00CDEA24 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152AF1F946D2C00CDEA24 /* libz.tbd */; };
+		D6A152B21F946D3B00CDEA24 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152B11F946D3B00CDEA24 /* UserNotifications.framework */; };
+		D6A152B41F946D4900CDEA24 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152B31F946D4900CDEA24 /* libresolv.tbd */; };
+		D6A152F11F94A29500CDEA24 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6A152EF1F94A29500CDEA24 /* Model.xcdatamodeld */; };
+		D6A152F71F94A77700CDEA24 /* JJGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A152F31F94A77700CDEA24 /* JJGuideView.swift */; };
+		D6A152F81F94A77700CDEA24 /* JJLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A152F41F94A77700CDEA24 /* JJLogViewController.swift */; };
+		D6A152F91F94A77700CDEA24 /* JJLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A152F51F94A77700CDEA24 /* JJLogViewController.xib */; };
+		D6A152FB1F94A9AE00CDEA24 /* JJSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A152FA1F94A9AE00CDEA24 /* JJSliderView.swift */; };
+		D6A152FD1F94AF9200CDEA24 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A152FC1F94AF9200CDEA24 /* UIView+Ex.swift */; };
 		D6FA5BE61F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA5BE41F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift */; };
 		D6FA5BE71F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6FA5BE51F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib */; };
 		D6FA5BEA1F7F865A00C08659 /* JJBottomADCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA5BE81F7F865A00C08659 /* JJBottomADCollectionViewCell.swift */; };
@@ -72,9 +89,6 @@
 		40C1862E310E562824E4C37E /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		81679C9CBFD56E434FDDD9AF /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AC81D2F91F89AD6A00A10C4B /* JJMeNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJMeNavView.swift; sourceTree = "<group>"; };
-		D65C6F211F8B64B5000A9F7E /* JJGuideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJGuideView.swift; sourceTree = "<group>"; };
-		D65C6F241F8B7002000A9F7E /* JJLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJLogViewController.swift; sourceTree = "<group>"; };
-		D65C6F251F8B7002000A9F7E /* JJLogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJLogViewController.xib; sourceTree = "<group>"; };
 		D6625C4B1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJImgViewTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6625C4C1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJImgViewTitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		D6625C4F1F8DE969001491C9 /* JJNewsImgCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJNewsImgCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -127,6 +141,30 @@
 		D6A14DE11F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJShangJiaFooterCollectionReusableView.xib; sourceTree = "<group>"; };
 		D6A14DE61F90A18000DD6DDE /* JJShangJiaHotHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJShangJiaHotHeaderView.swift; sourceTree = "<group>"; };
 		D6A14DE71F90A18000DD6DDE /* JJShangJiaHotHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJShangJiaHotHeaderView.xib; sourceTree = "<group>"; };
+		D6A152931F945DCE00CDEA24 /* SwiftProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftProject.entitlements; sourceTree = "<group>"; };
+		D6A152961F94629A00CDEA24 /* jcore-ios-1.1.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.6.a"; sourceTree = "<group>"; };
+		D6A152971F94629A00CDEA24 /* jpush-extension-ios-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-extension-ios-1.0.0.a"; sourceTree = "<group>"; };
+		D6A152981F94629A00CDEA24 /* jpush-ios-3.0.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.7.a"; sourceTree = "<group>"; };
+		D6A152991F94629A00CDEA24 /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
+		D6A1529A1F94629A00CDEA24 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		D6A1529E1F94636A00CDEA24 /* SwiftProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		D6A1529F1F946CCE00CDEA24 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D6A152A11F946CDB00CDEA24 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		D6A152A31F946CE400CDEA24 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D6A152A51F946CEF00CDEA24 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D6A152A71F946CF700CDEA24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D6A152A91F946D0400CDEA24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D6A152AB1F946D0C00CDEA24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D6A152AD1F946D1300CDEA24 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D6A152AF1F946D2C00CDEA24 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D6A152B11F946D3B00CDEA24 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		D6A152B31F946D4900CDEA24 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		D6A152F01F94A29500CDEA24 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D6A152F31F94A77700CDEA24 /* JJGuideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJGuideView.swift; sourceTree = "<group>"; };
+		D6A152F41F94A77700CDEA24 /* JJLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJLogViewController.swift; sourceTree = "<group>"; };
+		D6A152F51F94A77700CDEA24 /* JJLogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJLogViewController.xib; sourceTree = "<group>"; };
+		D6A152FA1F94A9AE00CDEA24 /* JJSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJSliderView.swift; sourceTree = "<group>"; };
+		D6A152FC1F94AF9200CDEA24 /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		D6A577B15C32E80FF61AD020 /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FA5BE41F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJMeSectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		D6FA5BE51F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJMeSectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -139,6 +177,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A152B41F946D4900CDEA24 /* libresolv.tbd in Frameworks */,
+				D6A152B21F946D3B00CDEA24 /* UserNotifications.framework in Frameworks */,
+				D6A152B01F946D2C00CDEA24 /* libz.tbd in Frameworks */,
+				D6A152AE1F946D1300CDEA24 /* Security.framework in Frameworks */,
+				D6A152AC1F946D0C00CDEA24 /* UIKit.framework in Frameworks */,
+				D6A152AA1F946D0400CDEA24 /* Foundation.framework in Frameworks */,
+				D6A152A81F946CF700CDEA24 /* CoreGraphics.framework in Frameworks */,
+				D6A152A61F946CEF00CDEA24 /* SystemConfiguration.framework in Frameworks */,
+				D6A152A41F946CE400CDEA24 /* CoreTelephony.framework in Frameworks */,
+				D6A152A21F946CDB00CDEA24 /* CoreFoundation.framework in Frameworks */,
+				D6A152A01F946CCE00CDEA24 /* CFNetwork.framework in Frameworks */,
+				D6A1529C1F94629A00CDEA24 /* jpush-extension-ios-1.0.0.a in Frameworks */,
+				D6A1529D1F94629A00CDEA24 /* jpush-ios-3.0.7.a in Frameworks */,
+				D6A1529B1F94629A00CDEA24 /* jcore-ios-1.1.6.a in Frameworks */,
 				95B7F6830D9A68FB5A77BA93 /* Pods_SwiftProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				D69566911F8F1C120053343A /* UIButton+Array.swift */,
+				D6A152FC1F94AF9200CDEA24 /* UIView+Ex.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -252,6 +305,7 @@
 		D69A41691F7B3C6B00F363BB /* SwiftProject */ = {
 			isa = PBXGroup;
 			children = (
+				D6A152931F945DCE00CDEA24 /* SwiftProject.entitlements */,
 				D69A417C1F7B461800F363BB /* Base */,
 				D69566901F8F1B150053343A /* Category */,
 				D69A417D1F7B461800F363BB /* GuanJia */,
@@ -262,9 +316,12 @@
 				D69A41821F7B461800F363BB /* Shop */,
 				D69A41831F7B461800F363BB /* Tools */,
 				D6C751BF1F8B260500D39C22 /* Utils */,
+				D6A152941F94627B00CDEA24 /* Vender */,
 				D69A416A1F7B3C6B00F363BB /* AppDelegate.swift */,
 				D69A41731F7B3C6B00F363BB /* LaunchScreen.storyboard */,
 				D69A41761F7B3C6B00F363BB /* Info.plist */,
+				D6A1529E1F94636A00CDEA24 /* SwiftProject-Bridging-Header.h */,
+				D6A152EF1F94A29500CDEA24 /* Model.xcdatamodeld */,
 				D69356601F8DAF9400C9756B /* Media.xcassets */,
 			);
 			path = SwiftProject;
@@ -341,12 +398,49 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		D6A152941F94627B00CDEA24 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				D6A152951F94629A00CDEA24 /* JPush */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		D6A152951F94629A00CDEA24 /* JPush */ = {
+			isa = PBXGroup;
+			children = (
+				D6A152961F94629A00CDEA24 /* jcore-ios-1.1.6.a */,
+				D6A152971F94629A00CDEA24 /* jpush-extension-ios-1.0.0.a */,
+				D6A152981F94629A00CDEA24 /* jpush-ios-3.0.7.a */,
+				D6A152991F94629A00CDEA24 /* JPushNotificationExtensionService.h */,
+				D6A1529A1F94629A00CDEA24 /* JPUSHService.h */,
+			);
+			path = JPush;
+			sourceTree = "<group>";
+		};
+		D6A152F21F94A77700CDEA24 /* JJGuideView */ = {
+			isa = PBXGroup;
+			children = (
+				D6A152F31F94A77700CDEA24 /* JJGuideView.swift */,
+				D6A152F41F94A77700CDEA24 /* JJLogViewController.swift */,
+				D6A152F51F94A77700CDEA24 /* JJLogViewController.xib */,
+			);
+			path = JJGuideView;
+			sourceTree = "<group>";
+		};
+		D6A152F61F94A77700CDEA24 /* JJSliderView */ = {
+			isa = PBXGroup;
+			children = (
+				D6A152FA1F94A9AE00CDEA24 /* JJSliderView.swift */,
+			);
+			path = JJSliderView;
+			sourceTree = "<group>";
+		};
 		D6C751BF1F8B260500D39C22 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				D65C6F211F8B64B5000A9F7E /* JJGuideView.swift */,
-				D65C6F241F8B7002000A9F7E /* JJLogViewController.swift */,
-				D65C6F251F8B7002000A9F7E /* JJLogViewController.xib */,
+				D6A152F21F94A77700CDEA24 /* JJGuideView */,
+				D6A152F61F94A77700CDEA24 /* JJSliderView */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -354,6 +448,17 @@
 		FBA9F2AF8F4A52BBA261FCF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6A152B31F946D4900CDEA24 /* libresolv.tbd */,
+				D6A152B11F946D3B00CDEA24 /* UserNotifications.framework */,
+				D6A152AF1F946D2C00CDEA24 /* libz.tbd */,
+				D6A152AD1F946D1300CDEA24 /* Security.framework */,
+				D6A152AB1F946D0C00CDEA24 /* UIKit.framework */,
+				D6A152A91F946D0400CDEA24 /* Foundation.framework */,
+				D6A152A71F946CF700CDEA24 /* CoreGraphics.framework */,
+				D6A152A51F946CEF00CDEA24 /* SystemConfiguration.framework */,
+				D6A152A31F946CE400CDEA24 /* CoreTelephony.framework */,
+				D6A152A11F946CDB00CDEA24 /* CoreFoundation.framework */,
+				D6A1529F1F946CCE00CDEA24 /* CFNetwork.framework */,
 				D6A577B15C32E80FF61AD020 /* Pods_SwiftProject.framework */,
 			);
 			name = Frameworks;
@@ -397,6 +502,14 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = HN2F9US93L;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -426,6 +539,7 @@
 				D686C8771F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.xib in Resources */,
 				D6A14DDB1F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.xib in Resources */,
 				D686C87E1F7CE428002FCAFA /* JJMeHeaderSectionCollectionViewCell.xib in Resources */,
+				D6A152F91F94A77700CDEA24 /* JJLogViewController.xib in Resources */,
 				D69356611F8DAF9400C9756B /* Media.xcassets in Resources */,
 				D6A14DE91F90A18000DD6DDE /* JJShangJiaHotHeaderView.xib in Resources */,
 				D686C8751F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.xib in Resources */,
@@ -443,7 +557,6 @@
 				D6625C4E1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib in Resources */,
 				D69A41751F7B3C6B00F363BB /* LaunchScreen.storyboard in Resources */,
 				D68CFC161F8CCCDA005697F2 /* JJHomeBannerHeaderView.xib in Resources */,
-				D65C6F271F8B7002000A9F7E /* JJLogViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +632,10 @@
 				D686C8761F7C9926002FCAFA /* JJHomeBannerCollectionReusableView.swift in Sources */,
 				D6625C581F8DFC5C001491C9 /* JJHomeNav.swift in Sources */,
 				D686C8741F7C9926002FCAFA /* JJGuanJiaCollectionViewCell.swift in Sources */,
+				D6A152F81F94A77700CDEA24 /* JJLogViewController.swift in Sources */,
+				D6A152F11F94A29500CDEA24 /* Model.xcdatamodeld in Sources */,
+				D6A152FD1F94AF9200CDEA24 /* UIView+Ex.swift in Sources */,
+				D6A152FB1F94A9AE00CDEA24 /* JJSliderView.swift in Sources */,
 				D689FF131F8E2147004A4AF8 /* JJShangjiaNav.swift in Sources */,
 				D6A14DE21F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.swift in Sources */,
 				AC81D2FA1F89AD6B00A10C4B /* JJMeNavView.swift in Sources */,
@@ -528,11 +645,10 @@
 				D69566921F8F1C120053343A /* UIButton+Array.swift in Sources */,
 				D68CFC191F8CD61C005697F2 /* JJHomeSectionHeaderView.swift in Sources */,
 				D69A41991F7B7C5200F363BB /* JJqqqqViewController.swift in Sources */,
-				D65C6F231F8B64B5000A9F7E /* JJGuideView.swift in Sources */,
 				D6625C4D1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.swift in Sources */,
 				D6625C511F8DE969001491C9 /* JJNewsImgCollectionViewCell.swift in Sources */,
-				D65C6F261F8B7002000A9F7E /* JJLogViewController.swift in Sources */,
 				D6FA5BE61F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift in Sources */,
+				D6A152F71F94A77700CDEA24 /* JJGuideView.swift in Sources */,
 				D69A41A11F7B9BE200F363BB /* PCHFile.swift in Sources */,
 				D6A14DDA1F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.swift in Sources */,
 				D69A41871F7B4A0A00F363BB /* JJTabBarViewController.swift in Sources */,
@@ -656,11 +772,17 @@
 			baseConfigurationReference = 81679C9CBFD56E434FDDD9AF /* Pods-SwiftProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftProject/SwiftProject.entitlements;
 				DEVELOPMENT_TEAM = HN2F9US93L;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftProject/Vender/JPush",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vpjacob.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProject/SwiftProject-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -671,11 +793,17 @@
 			baseConfigurationReference = 40C1862E310E562824E4C37E /* Pods-SwiftProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftProject/SwiftProject.entitlements;
 				DEVELOPMENT_TEAM = HN2F9US93L;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftProject/Vender/JPush",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vpjacob.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProject/SwiftProject-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -703,6 +831,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D6A152EF1F94A29500CDEA24 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D6A152F01F94A29500CDEA24 /* Model.xcdatamodel */,
+			);
+			currentVersion = D6A152F01F94A29500CDEA24 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D69A415F1F7B3C6B00F363BB /* Project object */;
 }

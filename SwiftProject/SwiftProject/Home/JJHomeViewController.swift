@@ -8,6 +8,7 @@
 
 import UIKit
 import FSPagerView
+import CoreData
 
 fileprivate let margin:CGFloat = 5.0
 fileprivate let padding:CGFloat = 12.0
@@ -15,7 +16,6 @@ fileprivate let padding:CGFloat = 12.0
 class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
     var nav:JJHomeNav?
-    
     
     func initDatas() {
             self.dataSource = [
@@ -39,15 +39,53 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
 
     func setupUI() {
         nav = JJHomeNav(frame: .zero)
-//        nav?.backgroundColor = UIColor.clear
         self.view.addSubview(collectionView)
         self.view.addSubview(nav!)
         nav?.leftBlockAction = {
             print("left   action")
+            let app = UIApplication.shared.delegate as! AppDelegate
+            let context  = app.persistentContainer.viewContext
+            
+            let user = NSEntityDescription.insertNewObject(forEntityName: "Person", into: context) as! Person
+            
+            user.age = 12
+            user.name = "dong"
+            
+            do {
+                try context.save()
+                print("baocun chenggong")
+            } catch  {
+                fatalError("buneng bao cun")
+            }
+            
         }
         
         nav?.rightBlockAction = {
             print("right   action")
+            let app = UIApplication.shared.delegate as! AppDelegate
+            let context = app.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<Person>(entityName: "Person")
+            fetchRequest.fetchLimit = 10
+            fetchRequest.fetchOffset = 0
+            
+            let predicate = NSPredicate(format: "name= 'dong'", "")
+            fetchRequest.predicate = predicate
+            
+            
+            //查询操作
+            do {
+                let fetchedObjects = try context.fetch(fetchRequest)
+                
+                //遍历查询的结果
+                for info in fetchedObjects{
+                    print(info.name ?? "")
+                    print(info.age)
+                }
+            }
+            catch {
+                fatalError("不能保存：\(error)")
+            }
         }
     }
     
@@ -220,6 +258,9 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if section == 0 || section == 1 {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
         return UIEdgeInsets(top: 0, left: padding, bottom: 0, right: padding)
     }
     

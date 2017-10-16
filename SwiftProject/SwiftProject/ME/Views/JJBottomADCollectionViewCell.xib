@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,14 +19,14 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i9a-Jk-0hk">
-                        <rect key="frame" x="10" y="0.0" width="236" height="101"/>
+                        <rect key="frame" x="0.0" y="0.0" width="256" height="101"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="i9a-Jk-0hk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="508-9C-M9q"/>
-                <constraint firstAttribute="trailing" secondItem="i9a-Jk-0hk" secondAttribute="trailing" constant="10" id="GO9-aY-ryC"/>
-                <constraint firstItem="i9a-Jk-0hk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="KvZ-NY-gfz"/>
+                <constraint firstAttribute="trailing" secondItem="i9a-Jk-0hk" secondAttribute="trailing" id="GO9-aY-ryC"/>
+                <constraint firstItem="i9a-Jk-0hk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KvZ-NY-gfz"/>
                 <constraint firstAttribute="bottom" secondItem="i9a-Jk-0hk" secondAttribute="bottom" id="kLg-6f-1xG"/>
             </constraints>
             <size key="customSize" width="256" height="101"/>

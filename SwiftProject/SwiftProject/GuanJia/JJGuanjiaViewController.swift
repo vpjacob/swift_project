@@ -15,8 +15,8 @@ class JJGuanjiaViewController: JJBaseViewController,UICollectionViewDataSource,U
     func initData() {
        self.dataSource = [
         [["icon":"kmjl","name":"开门记录"],["icon":"yjkm","name":"一键开门"],["icon":"mksp","name":"门口视频"],["icon":"mjys","name":"门禁钥匙"],],
-        [["icon":"xqgg","name":"小区公共"],["icon":"lxwy","name":"联系物业"],["icon":"sswx","name":"设备维修"],["icon":"gd","name":"更多"],],
-        [["icon":"wdfw","name":"我的房屋"],["icon":"sqfk","name":"授权访客"],["icon":"wscy","name":"我是成员"],["icon":"guanjia_shezhi","name":"设置"],]
+        [["icon":"gg","name":"小区公共"],["icon":"lxwy","name":"联系物业"],["icon":"sswx","name":"设备维修"],["icon":"gd","name":"更多"],],
+        [["icon":"wdfw","name":"我的房屋"],["icon":"sqfk","name":"授权访客"],["icon":"wscy","name":"我是成员"],["icon":"sz","name":"设置"],]
         ]
     }
     

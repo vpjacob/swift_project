@@ -8,12 +8,19 @@
 
 import UIKit
 
-class JJShopViewController: JJBaseViewController {
+class JJShopViewController: JJBaseViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let sliderView = JJSliderView(frame: CGRect(x: 0, y: 64, width: Screen_Width, height: 40), buttonTitles: ["左面","右面"])
+        self.view.addSubview(sliderView)
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func selectedButton(button: UIButton) {
+        print("ddddd" + button.tag.description)
     }
 
     override func viewWillAppear(_ animated: Bool) {

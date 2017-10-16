@@ -25,8 +25,6 @@ class JJShangjiaNav: UIView {
         return btn
     }()
     
-
-    
    public var searchBtn:UIButton = {
         let btn = UIButton(type: UIButtonType.custom)
         
@@ -40,7 +38,6 @@ class JJShangjiaNav: UIView {
         btn.sizeToFit()
         return btn
     }()
-    
     
     override init(frame: CGRect) {
         super.init(frame: CGRect(x: 0, y: 0, width: Screen_Width, height: KNav_Height))
