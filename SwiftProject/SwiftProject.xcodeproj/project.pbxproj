@@ -33,6 +33,9 @@
 		D68CFC1A1F8CD61C005697F2 /* JJHomeSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68CFC181F8CD61C005697F2 /* JJHomeSectionHeaderView.xib */; };
 		D68CFC1D1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CFC1B1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift */; };
 		D68CFC1E1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68CFC1C1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib */; };
+		D69054F61F96F39D00A31FC5 /* JJQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69054F51F96F39D00A31FC5 /* JJQRCodeViewController.swift */; };
+		D69054FA1F9703D600A31FC5 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69054F91F9703D600A31FC5 /* NetworkRequest.swift */; };
+		D69054FC1F9762CA00A31FC5 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69054FB1F9762CA00A31FC5 /* SwiftNotice.swift */; };
 		D69356611F8DAF9400C9756B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69356601F8DAF9400C9756B /* Media.xcassets */; };
 		D695668F1F8F08080053343A /* JJShangJiaTopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695668E1F8F08080053343A /* JJShangJiaTopCollectionViewCell.swift */; };
 		D69566921F8F1C120053343A /* UIButton+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69566911F8F1C120053343A /* UIButton+Array.swift */; };
@@ -59,9 +62,6 @@
 		D6A14DE31F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14DE11F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.xib */; };
 		D6A14DE81F90A18000DD6DDE /* JJShangJiaHotHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14DE61F90A18000DD6DDE /* JJShangJiaHotHeaderView.swift */; };
 		D6A14DE91F90A18000DD6DDE /* JJShangJiaHotHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14DE71F90A18000DD6DDE /* JJShangJiaHotHeaderView.xib */; };
-		D6A1529B1F94629A00CDEA24 /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152961F94629A00CDEA24 /* jcore-ios-1.1.6.a */; };
-		D6A1529C1F94629A00CDEA24 /* jpush-extension-ios-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152971F94629A00CDEA24 /* jpush-extension-ios-1.0.0.a */; };
-		D6A1529D1F94629A00CDEA24 /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152981F94629A00CDEA24 /* jpush-ios-3.0.7.a */; };
 		D6A152A01F946CCE00CDEA24 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A1529F1F946CCE00CDEA24 /* CFNetwork.framework */; };
 		D6A152A21F946CDB00CDEA24 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152A11F946CDB00CDEA24 /* CoreFoundation.framework */; };
 		D6A152A41F946CE400CDEA24 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A152A31F946CE400CDEA24 /* CoreTelephony.framework */; };
@@ -79,6 +79,12 @@
 		D6A152F91F94A77700CDEA24 /* JJLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A152F51F94A77700CDEA24 /* JJLogViewController.xib */; };
 		D6A152FB1F94A9AE00CDEA24 /* JJSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A152FA1F94A9AE00CDEA24 /* JJSliderView.swift */; };
 		D6A152FD1F94AF9200CDEA24 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A152FC1F94AF9200CDEA24 /* UIView+Ex.swift */; };
+		D6A78A8A1F95ADD8007F1951 /* JJBaiduMap.mm in Sources */ = {isa = PBXBuildFile; fileRef = D6A78A891F95ADD8007F1951 /* JJBaiduMap.mm */; };
+		D6A78A8C1F95AF50007F1951 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A78A8B1F95AF50007F1951 /* libsqlite3.0.tbd */; };
+		D6A78A8E1F95AF63007F1951 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A78A8D1F95AF63007F1951 /* libstdc++.6.0.9.tbd */; };
+		D6A78A901F95AF8D007F1951 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A78A8F1F95AF8D007F1951 /* CoreLocation.framework */; };
+		D6A78A921F95AF96007F1951 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A78A911F95AF96007F1951 /* QuartzCore.framework */; };
+		D6A78A941F95AF9D007F1951 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A78A931F95AF9D007F1951 /* OpenGLES.framework */; };
 		D6FA5BE61F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA5BE41F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift */; };
 		D6FA5BE71F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6FA5BE51F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib */; };
 		D6FA5BEA1F7F865A00C08659 /* JJBottomADCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA5BE81F7F865A00C08659 /* JJBottomADCollectionViewCell.swift */; };
@@ -113,6 +119,9 @@
 		D68CFC181F8CD61C005697F2 /* JJHomeSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJHomeSectionHeaderView.xib; sourceTree = "<group>"; };
 		D68CFC1B1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJImgViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		D68CFC1C1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJImgViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		D69054F51F96F39D00A31FC5 /* JJQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJQRCodeViewController.swift; sourceTree = "<group>"; };
+		D69054F91F9703D600A31FC5 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		D69054FB1F9762CA00A31FC5 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
 		D69356601F8DAF9400C9756B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		D695668E1F8F08080053343A /* JJShangJiaTopCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJShangJiaTopCollectionViewCell.swift; sourceTree = "<group>"; };
 		D69566911F8F1C120053343A /* UIButton+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Array.swift"; sourceTree = "<group>"; };
@@ -142,11 +151,6 @@
 		D6A14DE61F90A18000DD6DDE /* JJShangJiaHotHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJShangJiaHotHeaderView.swift; sourceTree = "<group>"; };
 		D6A14DE71F90A18000DD6DDE /* JJShangJiaHotHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJShangJiaHotHeaderView.xib; sourceTree = "<group>"; };
 		D6A152931F945DCE00CDEA24 /* SwiftProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftProject.entitlements; sourceTree = "<group>"; };
-		D6A152961F94629A00CDEA24 /* jcore-ios-1.1.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.6.a"; sourceTree = "<group>"; };
-		D6A152971F94629A00CDEA24 /* jpush-extension-ios-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-extension-ios-1.0.0.a"; sourceTree = "<group>"; };
-		D6A152981F94629A00CDEA24 /* jpush-ios-3.0.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.7.a"; sourceTree = "<group>"; };
-		D6A152991F94629A00CDEA24 /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
-		D6A1529A1F94629A00CDEA24 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		D6A1529E1F94636A00CDEA24 /* SwiftProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		D6A1529F1F946CCE00CDEA24 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D6A152A11F946CDB00CDEA24 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -166,6 +170,12 @@
 		D6A152FA1F94A9AE00CDEA24 /* JJSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJSliderView.swift; sourceTree = "<group>"; };
 		D6A152FC1F94AF9200CDEA24 /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		D6A577B15C32E80FF61AD020 /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6A78A891F95ADD8007F1951 /* JJBaiduMap.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JJBaiduMap.mm; sourceTree = "<group>"; };
+		D6A78A8B1F95AF50007F1951 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		D6A78A8D1F95AF63007F1951 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		D6A78A8F1F95AF8D007F1951 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D6A78A911F95AF96007F1951 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D6A78A931F95AF9D007F1951 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		D6FA5BE41F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJMeSectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		D6FA5BE51F7F837300C08659 /* JJMeSectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJMeSectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		D6FA5BE81F7F865A00C08659 /* JJBottomADCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJBottomADCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -177,20 +187,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A152AE1F946D1300CDEA24 /* Security.framework in Frameworks */,
+				D6A152A81F946CF700CDEA24 /* CoreGraphics.framework in Frameworks */,
+				D6A152A61F946CEF00CDEA24 /* SystemConfiguration.framework in Frameworks */,
+				D6A78A941F95AF9D007F1951 /* OpenGLES.framework in Frameworks */,
+				D6A78A921F95AF96007F1951 /* QuartzCore.framework in Frameworks */,
+				D6A78A901F95AF8D007F1951 /* CoreLocation.framework in Frameworks */,
+				D6A78A8E1F95AF63007F1951 /* libstdc++.6.0.9.tbd in Frameworks */,
+				D6A152A41F946CE400CDEA24 /* CoreTelephony.framework in Frameworks */,
+				D6A78A8C1F95AF50007F1951 /* libsqlite3.0.tbd in Frameworks */,
 				D6A152B41F946D4900CDEA24 /* libresolv.tbd in Frameworks */,
 				D6A152B21F946D3B00CDEA24 /* UserNotifications.framework in Frameworks */,
 				D6A152B01F946D2C00CDEA24 /* libz.tbd in Frameworks */,
-				D6A152AE1F946D1300CDEA24 /* Security.framework in Frameworks */,
 				D6A152AC1F946D0C00CDEA24 /* UIKit.framework in Frameworks */,
 				D6A152AA1F946D0400CDEA24 /* Foundation.framework in Frameworks */,
-				D6A152A81F946CF700CDEA24 /* CoreGraphics.framework in Frameworks */,
-				D6A152A61F946CEF00CDEA24 /* SystemConfiguration.framework in Frameworks */,
-				D6A152A41F946CE400CDEA24 /* CoreTelephony.framework in Frameworks */,
 				D6A152A21F946CDB00CDEA24 /* CoreFoundation.framework in Frameworks */,
 				D6A152A01F946CCE00CDEA24 /* CFNetwork.framework in Frameworks */,
-				D6A1529C1F94629A00CDEA24 /* jpush-extension-ios-1.0.0.a in Frameworks */,
-				D6A1529D1F94629A00CDEA24 /* jpush-ios-3.0.7.a in Frameworks */,
-				D6A1529B1F94629A00CDEA24 /* jcore-ios-1.1.6.a in Frameworks */,
 				95B7F6830D9A68FB5A77BA93 /* Pods_SwiftProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +287,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D69054F41F96F37400A31FC5 /* JJQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				D69054F51F96F39D00A31FC5 /* JJQRCodeViewController.swift */,
+			);
+			path = JJQRCode;
+			sourceTree = "<group>";
+		};
 		D69566901F8F1B150053343A /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +341,7 @@
 				D69A41731F7B3C6B00F363BB /* LaunchScreen.storyboard */,
 				D69A41761F7B3C6B00F363BB /* Info.plist */,
 				D6A1529E1F94636A00CDEA24 /* SwiftProject-Bridging-Header.h */,
+				D6A78A891F95ADD8007F1951 /* JJBaiduMap.mm */,
 				D6A152EF1F94A29500CDEA24 /* Model.xcdatamodeld */,
 				D69356601F8DAF9400C9756B /* Media.xcassets */,
 			);
@@ -333,6 +354,7 @@
 				D69A41861F7B4A0A00F363BB /* JJTabBarViewController.swift */,
 				D69A41881F7B4A2900F363BB /* JJNavController.swift */,
 				D69A418A1F7B690D00F363BB /* JJBaseViewController.swift */,
+				D69054F91F9703D600A31FC5 /* NetworkRequest.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -392,6 +414,7 @@
 		D69A41831F7B461800F363BB /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				D69054FB1F9762CA00A31FC5 /* SwiftNotice.swift */,
 				D69A41841F7B461800F363BB /* SplashView.swift */,
 				D69A41A01F7B9BE200F363BB /* PCHFile.swift */,
 			);
@@ -401,21 +424,8 @@
 		D6A152941F94627B00CDEA24 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				D6A152951F94629A00CDEA24 /* JPush */,
 			);
 			path = Vender;
-			sourceTree = "<group>";
-		};
-		D6A152951F94629A00CDEA24 /* JPush */ = {
-			isa = PBXGroup;
-			children = (
-				D6A152961F94629A00CDEA24 /* jcore-ios-1.1.6.a */,
-				D6A152971F94629A00CDEA24 /* jpush-extension-ios-1.0.0.a */,
-				D6A152981F94629A00CDEA24 /* jpush-ios-3.0.7.a */,
-				D6A152991F94629A00CDEA24 /* JPushNotificationExtensionService.h */,
-				D6A1529A1F94629A00CDEA24 /* JPUSHService.h */,
-			);
-			path = JPush;
 			sourceTree = "<group>";
 		};
 		D6A152F21F94A77700CDEA24 /* JJGuideView */ = {
@@ -439,6 +449,7 @@
 		D6C751BF1F8B260500D39C22 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D69054F41F96F37400A31FC5 /* JJQRCode */,
 				D6A152F21F94A77700CDEA24 /* JJGuideView */,
 				D6A152F61F94A77700CDEA24 /* JJSliderView */,
 			);
@@ -448,6 +459,11 @@
 		FBA9F2AF8F4A52BBA261FCF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6A78A931F95AF9D007F1951 /* OpenGLES.framework */,
+				D6A78A911F95AF96007F1951 /* QuartzCore.framework */,
+				D6A78A8F1F95AF8D007F1951 /* CoreLocation.framework */,
+				D6A78A8D1F95AF63007F1951 /* libstdc++.6.0.9.tbd */,
+				D6A78A8B1F95AF50007F1951 /* libsqlite3.0.tbd */,
 				D6A152B31F946D4900CDEA24 /* libresolv.tbd */,
 				D6A152B11F946D3B00CDEA24 /* UserNotifications.framework */,
 				D6A152AF1F946D2C00CDEA24 /* libz.tbd */,
@@ -501,6 +517,7 @@
 					D69A41661F7B3C6B00F363BB = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = HN2F9US93L;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -615,6 +632,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D69054F61F96F39D00A31FC5 /* JJQRCodeViewController.swift in Sources */,
 				D6FA5BEA1F7F865A00C08659 /* JJBottomADCollectionViewCell.swift in Sources */,
 				D69A41891F7B4A2900F363BB /* JJNavController.swift in Sources */,
 				D69A418F1F7B697300F363BB /* JJHomeViewController.swift in Sources */,
@@ -622,6 +640,7 @@
 				D68CFC1D1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift in Sources */,
 				D69A418B1F7B690D00F363BB /* JJBaseViewController.swift in Sources */,
 				D68CFC151F8CCCDA005697F2 /* JJHomeBannerHeaderView.swift in Sources */,
+				D6A78A8A1F95ADD8007F1951 /* JJBaiduMap.mm in Sources */,
 				D69A418D1F7B696700F363BB /* JJGuanjiaViewController.swift in Sources */,
 				D695668F1F8F08080053343A /* JJShangJiaTopCollectionViewCell.swift in Sources */,
 				D6625C551F8DE980001491C9 /* JJNewsTitleCollectionViewCell.swift in Sources */,
@@ -652,6 +671,8 @@
 				D69A41A11F7B9BE200F363BB /* PCHFile.swift in Sources */,
 				D6A14DDA1F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.swift in Sources */,
 				D69A41871F7B4A0A00F363BB /* JJTabBarViewController.swift in Sources */,
+				D69054FC1F9762CA00A31FC5 /* SwiftNotice.swift in Sources */,
+				D69054FA1F9703D600A31FC5 /* NetworkRequest.swift in Sources */,
 				D69A41851F7B461800F363BB /* SplashView.swift in Sources */,
 				D686C8781F7C9926002FCAFA /* JJTitleCollectionReusableView.swift in Sources */,
 				D69A41931F7B698C00F363BB /* JJShangJiaViewController.swift in Sources */,
@@ -774,6 +795,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SwiftProject/SwiftProject.entitlements;
 				DEVELOPMENT_TEAM = HN2F9US93L;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -795,6 +817,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SwiftProject/SwiftProject.entitlements;
 				DEVELOPMENT_TEAM = HN2F9US93L;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

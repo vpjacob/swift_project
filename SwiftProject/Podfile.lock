@@ -1,30 +1,39 @@
 PODS:
   - Alamofire (4.5.0)
+  - BaiduMapKit (3.3.2)
   - DGElasticPullToRefresh (1.1)
   - FSPagerView (0.5.5)
   - IQKeyboardManagerSwift (4.0.10)
+  - JCore (1.1.5)
+  - JPush (3.0.6):
+    - JCore (~> 1.1.1)
   - Kingfisher (3.10.3)
   - SnapKit (3.0.2)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
+  - BaiduMapKit
   - DGElasticPullToRefresh
   - FSPagerView
   - IQKeyboardManagerSwift
+  - JPush
   - Kingfisher
-  - SnapKit (~> 3.0.0)
+  - SnapKit
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  BaiduMapKit: 5118390d63b375483bd64c963e8e32a40fd9ddb5
   DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
   FSPagerView: 3ec72e6b201d77a48adab5ed1d33b43a8cc153d6
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
+  JCore: 9bd9c770c877c583d98b90a68792b8361974c231
+  JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
   Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 277759243744c082e13fb36cca8ebd93f3f70678
+PODFILE CHECKSUM: 435a6eca295b14005cb0d55ecd5c98d2cd68a221
 
 COCOAPODS: 1.2.1

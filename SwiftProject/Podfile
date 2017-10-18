@@ -10,7 +10,10 @@ pod 'Kingfisher'
 pod 'FSPagerView'
 pod 'DGElasticPullToRefresh'
 pod 'IQKeyboardManagerSwift'
-pod 'SnapKit', '~> 3.0.0'
+pod 'SnapKit'
+pod 'BaiduMapKit' #百度地图SDK
+pod 'JPush'
+
   # Pods for SwiftProject
 
 end

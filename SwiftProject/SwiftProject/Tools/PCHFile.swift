@@ -14,6 +14,7 @@ public let Screen_Width = UIScreen.main.bounds.size.width
 public let Screen_Height = UIScreen.main.bounds.size.height
 public let KTabbar_Height:CGFloat = 49.0
 public let KNav_Height:CGFloat = 64.0
+public let KStatusBar:CGFloat = 20.0
 public let isLogin:String = "isLogin"
 
 

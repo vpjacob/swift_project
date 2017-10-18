@@ -13,39 +13,17 @@ import IQKeyboardManagerSwift
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate,JPUSHRegisterDelegate {
 
     var window: UIWindow?
     let url = URL(string: "http://xk.ppke.cn:9030/xk/appStartImg.do")
     let imgUrlFront:String = "http://www.ppke.cn"
     lazy var tabVC:JJTabBarViewController = JJTabBarViewController()
     
+    //百度地图管理者
+    var _mapManager: BMKMapManager?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // 通知注册实体类
-        let entity = JPUSHRegisterEntity()
-        entity.types = Int(JPAuthorizationOptions.alert.rawValue) |  Int(JPAuthorizationOptions.sound.rawValue) |  Int(JPAuthorizationOptions.badge.rawValue)
-        
-        if #available(iOS 8.0, *) {
-            // 可以添加自定义categories
-            // NSSet<UNNotificationCategory *> *categories for iOS10 or later
-            // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
-
-        }
-        JPUSHService.register(forRemoteNotificationConfig: entity, delegate: self);
-        // 注册极光推送
-        JPUSHService.setup(withOption: launchOptions, appKey: "42beb58a8766a7aaf43f7971", channel:"App Store" , apsForProduction: false);
-        
-        
-        
-//        // 获取推送消息
-//        let remote = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? Dictionary<String,Any>;
-//        // 如果remote不为空，就代表应用在未打开的时候收到了推送消息
-//        if remote != nil {
-//            // 收到推送消息实现的方法
-//            self.perform(#selector(receivePush), with: remote, afterDelay: 1.0);
-//        }
-        
 
         IQKeyboardManager.sharedManager().enable = true
         
@@ -56,50 +34,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
         newVersion()
         showAdvertisment()
         
-        
-        
+        //百度地图
+        _mapManager = BMKMapManager()
+        // 如果要关注网络及授权验证事件，请设定generalDelegate参数
+        let ret = _mapManager?.start("nnWXnciG5vbnPLqktxsYZw86087ri4MW", generalDelegate: self)
+        if ret == false {
+            NSLog("manager start failed!")
+        }
+        //推送
+        let entity = JPUSHRegisterEntity()
+        entity.types = Int(JPAuthorizationOptions.alert.rawValue) |  Int(JPAuthorizationOptions.sound.rawValue) |  Int(JPAuthorizationOptions.badge.rawValue)
+        JPUSHService.register(forRemoteNotificationConfig: entity, delegate: self)
+        JPUSHService.setup(withOption: launchOptions, appKey: "fea83caed3acc79d8e24e9a1", channel: "App Store", apsForProduction: false)
         return true
     }
 
-    //注册APNs成功并上报DeviceToken
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        JPUSHService.registerDeviceToken(deviceToken)
-    }
-    
-    //实现注册APNs失败接口（可选）
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print("did Fail To Register For Remote Notifications With Error:" + error.localizedDescription)
-    }
-    
-    @available(iOS 10.0, *)
-    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, willPresent notification: UNNotification!, withCompletionHandler completionHandler: ((Int) -> Void)!) {
-        
-        let userInfo = notification.request.content.userInfo;
-        if notification.request.trigger is UNPushNotificationTrigger {
-            JPUSHService.handleRemoteNotification(userInfo);
-        }
-        // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以选择设置
-        completionHandler(Int(UNNotificationPresentationOptions.alert.rawValue))
-    }
-    // 添加处理APNs通知回调方法
-    @available(iOS 10.0, *)
-    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, didReceive response: UNNotificationResponse!, withCompletionHandler completionHandler: (() -> Void)!) {
-        
-        let userInfo = response.notification.request.content.userInfo;
-        if response.notification.request.trigger is UNPushNotificationTrigger {
-            JPUSHService.handleRemoteNotification(userInfo);
-        }
-        completionHandler();
-    }
-    
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        
-        JPUSHService.handleRemoteNotification(userInfo);
-        completionHandler(UIBackgroundFetchResult.newData);
-    }
 
-
-    
+    // MARK: - 广告页
     func showAdvertisment() {
         let defaultImage = UIImage(named: "ad_image.png")
         SplashView.showSplashView(defaultImage: defaultImage, tapSplashImageBlock: { (tapString) in
@@ -107,21 +58,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
         }) { (dissMiss) in
             
         }
-        let headers: HTTPHeaders = [
-            "Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
-            "Accept": "application/json"
-        ]
-        Alamofire.request(url!, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers).response { (response) in
-            let json = JSON(data: response.data!)
-            let imgUrl:String = json["data"][0]["imgUrl"].string ?? ""
+        
+
+
+        NetworkRequest.sharedInstance.postRequest(URLString: "http://xk.ppke.cn:9030/xk/appStartImg.do", parameters: nil, finishedCallback: { (response) in
+
+            let imgUrl:String = response["data"][0]["imgUrl"].string ?? ""
             if imgUrl.isEmpty{
                 return
             }
+            print(imgUrl)
+            self.successNotice("请求成功", autoClear: true)
             SplashView.updateSplashData(self.imgUrlFront + imgUrl, actUrl: nil)
+        }) { (error) in
+            self.errorNotice("请求失败", autoClear: true)
         }
         
+        //        Alamofire.request(url!, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { (response) in
+//            let json = JSON(data: response.data!)
+//            let imgUrl:String = json["data"][0]["imgUrl"].string ?? ""
+//            if imgUrl.isEmpty{
+//                return
+//            }
+//            SplashView.updateSplashData(self.imgUrlFront + imgUrl, actUrl: nil)
+//        }
+
+        
     }
-    
+
+    //是否是新版本，是新版本展示新特性
     func newVersion() {
         let version:String = UserDefaults.standard.value(forKey: "version") as? String ?? ""
         if !version.isEmpty  {//不是空
@@ -137,6 +102,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
             window?.addSubview(JJGuideView(frame: CGRect(x: 0, y: 0, width: Screen_Width, height: Screen_Height)))
         }
     }
+    
+    //jpush
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        /// Required - 注册 DeviceToken
+        JPUSHService.registerDeviceToken(deviceToken)
+    }
+    @available(iOS 10.0,*)
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, willPresent notification: UNNotification!, withCompletionHandler completionHandler: ((Int) -> Void)!) {
+        let userInfo = notification.request.content.userInfo as! Dictionary < String,Any >
+        if notification.request.trigger is UNPushNotificationTrigger {
+            JPUSHService.handleRemoteNotification(userInfo)
+        }
+        completionHandler(Int(UNNotificationPresentationOptions.alert.rawValue))
+    }
+    
+    @available(iOS 10.0,*)
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, didReceive response: UNNotificationResponse!, withCompletionHandler completionHandler: (() -> Void)!) {
+        let userInfo = response.notification.request.content.userInfo as! Dictionary < String,Any >
+        if response.notification.request.trigger is UNPushNotificationTrigger {
+            JPUSHService.handleRemoteNotification(userInfo);
+        }
+        completionHandler();
+//        print(userInfo.description)
+        let aps = userInfo["aps"] as! Dictionary < String,Any >
+        let vc = aps["category"] as? String ?? "nil"
+        
+        if vc == "ccc"{
+            self.tabVC.selectedIndex = 0
+        }
+        
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        JPUSHService.handleRemoteNotification(userInfo)
+        completionHandler(UIBackgroundFetchResult.newData)
+    }
+    
+
+
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

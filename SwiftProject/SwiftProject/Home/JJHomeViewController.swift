@@ -90,7 +90,7 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
     }
     
         func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            let offsetY = scrollView.contentOffset.y
+            let offsetY = scrollView.contentOffset.y + KStatusBar
             if offsetY > 0 && offsetY <= KNav_Height {
                 nav?.backgroundColor = UIColor().hexStringToColor(hexString: "#ff602f").withAlphaComponent(offsetY/KNav_Height)
             }else if (offsetY > KNav_Height){
