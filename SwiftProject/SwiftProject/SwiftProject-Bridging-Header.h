@@ -9,6 +9,20 @@
 #ifndef SwiftProject_Bridging_Header_h
 #define SwiftProject_Bridging_Header_h
 
+#import <SMS_SDK/SMSSDK.h>
+#import <Mantle/Mantle.h>
+
+#import "JJBaseModel.h"
+
+#import "JJHomeModel.h"
+
+
+
+
+
+
+
+
 // 引入JPush功能所需头文件
 #import "JPUSHService.h"
 // iOS10注册APNs所需头文件

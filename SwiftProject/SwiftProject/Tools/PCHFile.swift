@@ -12,10 +12,14 @@ import UIKit
 
 public let Screen_Width = UIScreen.main.bounds.size.width
 public let Screen_Height = UIScreen.main.bounds.size.height
-public let KTabbar_Height:CGFloat = 49.0
-public let KNav_Height:CGFloat = 64.0
+public let KTabbar_Height:CGFloat = (Screen_Height == 812.0 ? 83 : 49)
+public let KNav_Height:CGFloat = (Screen_Height == 812.0 ? 88 : 64)
 public let KStatusBar:CGFloat = 20.0
 public let isLogin:String = "isLogin"
+public let KurlStr = "http://www.ppke.cn/api/execscript"
+
+
+
 
 
 //获取视图尺寸

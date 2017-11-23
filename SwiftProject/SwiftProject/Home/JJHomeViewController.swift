@@ -9,6 +9,9 @@
 import UIKit
 import FSPagerView
 import CoreData
+import GoogleMobileAds
+import Alamofire
+import SwiftyJSON
 
 fileprivate let margin:CGFloat = 5.0
 fileprivate let padding:CGFloat = 12.0
@@ -16,6 +19,11 @@ fileprivate let padding:CGFloat = 12.0
 class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
     var nav:JJHomeNav?
+    
+    var adInterstitial = GADInterstitial(adUnitID: "ca-app-pub-9554187975714748/4439146610")
+    var timer = Timer()
+    
+    
     
     func initDatas() {
             self.dataSource = [
@@ -30,35 +38,60 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
+        } else {
+            // Fallback on earlier versions
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
+        adInit()
         initDatas()
         setupUI()
-        
+        getData()
         // Do any additional setup after loading the view.
     }
-
+// MARK: - 广告
+    func adInit() {
+        let gadRequest1 = GADRequest()
+        self.adInterstitial.load(gadRequest1)
+        
+    }
+    
+    
+    
     func setupUI() {
         nav = JJHomeNav(frame: .zero)
         self.view.addSubview(collectionView)
         self.view.addSubview(nav!)
         nav?.leftBlockAction = {
-            print("left   action")
-            let app = UIApplication.shared.delegate as! AppDelegate
-            let context  = app.persistentContainer.viewContext
-            
-            let user = NSEntityDescription.insertNewObject(forEntityName: "Person", into: context) as! Person
-            
-            user.age = 12
-            user.name = "dong"
-            
-            do {
-                try context.save()
-                print("baocun chenggong")
-            } catch  {
-                fatalError("buneng bao cun")
+            if self.adInterstitial.isReady {
+                self.adInterstitial.present(fromRootViewController: self)
+            } else {
+                print("Ad wasn't ready")
             }
             
+            
+//            print("left   action")
+//            let app = UIApplication.shared.delegate as! AppDelegate
+//            let context  = app.persistentContainer.viewContext
+//
+//            let user = NSEntityDescription.insertNewObject(forEntityName: "Person", into: context) as! Person
+//
+//            user.age = 12
+//            user.name = "dong"
+//
+//            do {
+//                try context.save()
+//                print("baocun chenggong")
+//            } catch  {
+//                fatalError("buneng bao cun")
+//            }
+
+            
+            
+            
         }
+        
         
         nav?.rightBlockAction = {
             print("right   action")
@@ -89,8 +122,36 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
         }
     }
     
+    // MARK: - Network
+    func getData() {
+        let dic = ["script":"mobile.center.homepage.homepage","needTrascation":true,"funName":"queryHomePageInfo","form":[
+            ]] as [String : Any]
+        
+        Alamofire.request(KurlStr, parameters: dic)
+            .responseJSON { response in
+
+                let json = JSON(data: response.data!)
+                print("JSON: \(json)")
+                let homeModel = JJHomeModel.changeResponseJSONObject(json.rawValue)
+                print(homeModel!)
+                print((homeModel! as! JJHomeModel).formDataset.placeFourList)
+//                let ho = JJDatasetModel.changeResponseJSONObject(json.rawValue)
+//                print(ho!)
+                let str:String = (homeModel! as! JJHomeModel).formDataset.placeFourList
+                
+                let datas = str.data(using: String.Encoding.utf8)
+                let json2 = JSON(data: datas!)
+                let rowModelArray = JJHomeRowModel.changeJSONArray(json2.rawValue as! [Any])
+                print(rowModelArray![0])
+                
+                
+        }
+    }
+    
+    
+    // MARK: - nav
         func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            let offsetY = scrollView.contentOffset.y + KStatusBar
+            let offsetY = scrollView.contentOffset.y
             if offsetY > 0 && offsetY <= KNav_Height {
                 nav?.backgroundColor = UIColor().hexStringToColor(hexString: "#ff602f").withAlphaComponent(offsetY/KNav_Height)
             }else if (offsetY > KNav_Height){
@@ -188,7 +249,9 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
     }
     
     // MARK: - UICollectionViewDelegate
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(JJqqqqViewController(), animated: true)
+    }
 
     // MARK: - header&footer
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

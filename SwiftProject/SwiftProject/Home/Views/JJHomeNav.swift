@@ -22,14 +22,14 @@ class JJHomeNav: UIView {
     lazy var leftBtn: UIButton = {
         let btn = UIButton(type: UIButtonType.custom)
         btn.setImage(UIImage(named: "home_dz"), for: .normal)
-        btn.frame = CGRect(x: padding, y: 30, width: 20, height: 20)
+        btn.frame = CGRect(x: padding, y: KNav_Height - 34, width: 20, height: 20)
         btn.addTarget(self, action: #selector(leftBtnAction), for: UIControlEvents.touchUpInside)
         return btn
     }()
     lazy var rightBtn: UIButton = {
         let btn = UIButton(type: UIButtonType.custom)
         btn.setImage(UIImage(named: "home_scan"), for: .normal)
-        btn.frame = CGRect(x: Screen_Width - padding - 20, y: 30, width: 20, height: 20)
+        btn.frame = CGRect(x: Screen_Width - padding - 20, y: KNav_Height - 34, width: 20, height: 20)
         btn.addTarget(self, action: #selector(rightBtnAction), for: UIControlEvents.touchUpInside)
         return btn
     }()

@@ -4,19 +4,21 @@
 //
 //  Created by 刘毅 on 2017/9/27.
 //  Copyright © 2017年 vpjacob. All rights reserved.
-//
+//MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC9aTXwWRFypV5GF1x3Q32dFUd7CXNFA1l2yPC4nM0YqAi93VwIXM0RAI3Yje6w7g4Zn0GbUulUljGsuTMP2AV+zj+zxsXRcVKnL59SMJaU6Kdjt/qMGQEElFOG6fRGVWOwnqxfQ3ahE/UVtt5zLfIG00aLOENfbeqoaN3FtWWQ5omHe09T1h2KwENP52bUNXW4Y5/dJPu8lbxJvRdS9udJ6ljtSVSLeonQaEQb/dkwfggIPUDxQTuRO8df/DNa/ijdK+E8n025cYpy4c/ypTbBnQHmNck2VSGp1lpQG63Mc3mMevhwySAOjsdImFy2pPbvsgzQS7xTaVxMBHsMLl5PAgMBAAECggEABWMgrZ1a6a/aZpPzhVDeGcGpLs6uAKB/wukkL5wGGVVuKjhJjdNV4c3qOuaOi2m57PCipRBOoqFC+G6sDR9PyLOFDE/zAGoAt9Ca73OCVOnpGOT6s1FivgaZ+ZRd5kI3e6aHsI3yqdIvfladLRl5cMhBkWQgRm6R5ghVhnIKWXyohO9dILtvyuNfuyb7+uW1Cr4pdj+Ii51zdWocUza2NgqGifhUg/EasZtzn7nJksaJ1fmFKNdMj+UhfeYmqnWV2h0dm6QxmOpif16+VKIaNeOVvg8XNWtA6VAM7SQrc2Mukopda3ZhahTWdcyd9NQUjVMP99RKQRHGSfZvM/l8wQKBgQD0JAs+AEiO5WZN/rsX3lbThlcKM2QeQ33VAHGNuGxesnv/R82MeRh7SKdbNz1VWm9zTUWcG9I5fitVFH1Y0/0K3g5VX3zlgf8pOw7bcSEihds50U3Okn0XdCxXiZcGZ+hZ1TfK7nwv8804HsgNZeZ4OS22TG7PPBcdeP32utbDWwKBgQDGnJY9Qv6nDDILfmWPhqsAn3r6I5LiiMAiOSXxQAeXUhxqm8AcFgGOtQ4zK2zVnOiXaBpfSmIuIja1/7vBLFN6VGhMCNXgX41g+iAuRiBBSCVEAqm6S5vXCq6lxUTY5UfVUPQTcDL/bE0Fdk0MGG4ZcECW8SZA9LU3uAH2QMRHHQKBgERHpGFFwQU+ATvFB1xokY39H3C56MFSDOo6goepUZ22e1ltIn6sC33HVw76xwuNDGiJ7vL3EPeFYucboObr+vREIGweFZc2oT9Nxhz3adX269YixIkGjTe3BQPCdluTSfd922nFAzSCEh4k9bxRiICNNUyr2b3Zx3k1somDvbbLAoGAHsNMRgrldKxf6AXY50U9oWgSXUI7UxlJYUOmy9pWEqsmOaEMPY1vClKi82wLfH7ETAdU5mOYF3s3LDODOmWKPI1sZjKMJifGtzmm2GQGRPZOx1z+OxvQ9Jrz+Ds48bt5x+G1HHmpfISi3XC4eGIkU45egsKxYShGFW5L53+ap0UCgYBt1fD8zcgyJXKeXO7rg2+Z8HDqcqYvf/IJFH1/i+wjEa26Lmb5VW9uC+w8mywkc85N2nZPOEsyRU1+VBVFWxBB85EZc9sLSeoudIEqQPkaZTYNF3TYCJPGzW27taql6IQ5SGfvZ2+I2WSIgpf4nGt4J+Yd9dX/t4m3SCACwXkD9g==
+
 
 import UIKit
 import Alamofire
 import SwiftyJSON
 import IQKeyboardManagerSwift
 import CoreData
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate,JPUSHRegisterDelegate {
 
     var window: UIWindow?
-    let url = URL(string: "http://xk.ppke.cn:9030/xk/appStartImg.do")
+    let urlstr = URL(string: "http://xk.ppke.cn:9030/xk/appStartImg.do")
     let imgUrlFront:String = "http://www.ppke.cn"
     lazy var tabVC:JJTabBarViewController = JJTabBarViewController()
     
@@ -46,6 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate,JPUSHRe
         entity.types = Int(JPAuthorizationOptions.alert.rawValue) |  Int(JPAuthorizationOptions.sound.rawValue) |  Int(JPAuthorizationOptions.badge.rawValue)
         JPUSHService.register(forRemoteNotificationConfig: entity, delegate: self)
         JPUSHService.setup(withOption: launchOptions, appKey: "fea83caed3acc79d8e24e9a1", channel: "App Store", apsForProduction: false)
+        
+        
+        
+        GADMobileAds.configure(withApplicationID: "pub-9554187975714748")
+        
         return true
     }
 
@@ -58,31 +65,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate,JPUSHRe
         }) { (dissMiss) in
             
         }
-        
+                Alamofire.request(urlstr!, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { (response) in
 
-
-        NetworkRequest.sharedInstance.postRequest(URLString: "http://xk.ppke.cn:9030/xk/appStartImg.do", parameters: nil, finishedCallback: { (response) in
-
-            let imgUrl:String = response["data"][0]["imgUrl"].string ?? ""
+            let json = JSON(data: response.data!)
+            let imgUrl:String = json["data"][0]["imgUrl"].string ?? ""
             if imgUrl.isEmpty{
                 return
             }
-            print(imgUrl)
-            self.successNotice("请求成功", autoClear: true)
+                    
             SplashView.updateSplashData(self.imgUrlFront + imgUrl, actUrl: nil)
-        }) { (error) in
-            self.errorNotice("请求失败", autoClear: true)
         }
-        
-        //        Alamofire.request(url!, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { (response) in
-//            let json = JSON(data: response.data!)
-//            let imgUrl:String = json["data"][0]["imgUrl"].string ?? ""
-//            if imgUrl.isEmpty{
-//                return
-//            }
-//            SplashView.updateSplashData(self.imgUrlFront + imgUrl, actUrl: nil)
-//        }
-
         
     }
 

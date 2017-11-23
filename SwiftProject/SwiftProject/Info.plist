@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>MOBAppKey</key>
+	<string>21bcd41c151f6</string>
+	<key>MOBAppSecret</key>
+	<string>8e39e5b486e6bd67e7678b65e6ef1cc2</string>
 	<key>NSCameraUsageDescription</key>
 	<string>允许使用相机</string>
 	<key>CFBundleDevelopmentRegion</key>

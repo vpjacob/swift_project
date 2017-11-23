@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		95B7F6830D9A68FB5A77BA93 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A577B15C32E80FF61AD020 /* Pods_SwiftProject.framework */; };
 		AC81D2FA1F89AD6B00A10C4B /* JJMeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81D2F91F89AD6A00A10C4B /* JJMeNavView.swift */; };
+		D61AAB671FC6C27600EF8FC0 /* JJBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D61AAB651FC6C27600EF8FC0 /* JJBaseModel.m */; };
+		D61AAB6C1FC6C96000EF8FC0 /* JJHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D61AAB6B1FC6C96000EF8FC0 /* JJHomeModel.m */; };
 		D6625C4D1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6625C4B1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.swift */; };
 		D6625C4E1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6625C4C1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib */; };
 		D6625C511F8DE969001491C9 /* JJNewsImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6625C4F1F8DE969001491C9 /* JJNewsImgCollectionViewCell.swift */; };
@@ -34,8 +36,8 @@
 		D68CFC1D1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CFC1B1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift */; };
 		D68CFC1E1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68CFC1C1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib */; };
 		D69054F61F96F39D00A31FC5 /* JJQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69054F51F96F39D00A31FC5 /* JJQRCodeViewController.swift */; };
-		D69054FA1F9703D600A31FC5 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69054F91F9703D600A31FC5 /* NetworkRequest.swift */; };
 		D69054FC1F9762CA00A31FC5 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69054FB1F9762CA00A31FC5 /* SwiftNotice.swift */; };
+		D69054FF1F9873DE00A31FC5 /* JJGoodsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69054FE1F9873DE00A31FC5 /* JJGoodsDetailViewController.swift */; };
 		D69356611F8DAF9400C9756B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69356601F8DAF9400C9756B /* Media.xcassets */; };
 		D695668F1F8F08080053343A /* JJShangJiaTopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695668E1F8F08080053343A /* JJShangJiaTopCollectionViewCell.swift */; };
 		D69566921F8F1C120053343A /* UIButton+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69566911F8F1C120053343A /* UIButton+Array.swift */; };
@@ -95,6 +97,10 @@
 		40C1862E310E562824E4C37E /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		81679C9CBFD56E434FDDD9AF /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AC81D2F91F89AD6A00A10C4B /* JJMeNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJMeNavView.swift; sourceTree = "<group>"; };
+		D61AAB651FC6C27600EF8FC0 /* JJBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseModel.m; sourceTree = "<group>"; };
+		D61AAB661FC6C27600EF8FC0 /* JJBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseModel.h; sourceTree = "<group>"; };
+		D61AAB6A1FC6C96000EF8FC0 /* JJHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJHomeModel.h; sourceTree = "<group>"; };
+		D61AAB6B1FC6C96000EF8FC0 /* JJHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJHomeModel.m; sourceTree = "<group>"; };
 		D6625C4B1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJImgViewTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6625C4C1F8DE0A8001491C9 /* JJImgViewTitleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJImgViewTitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		D6625C4F1F8DE969001491C9 /* JJNewsImgCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJNewsImgCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -120,8 +126,8 @@
 		D68CFC1B1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJImgViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		D68CFC1C1F8CD9D6005697F2 /* JJImgViewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JJImgViewCollectionViewCell.xib; sourceTree = "<group>"; };
 		D69054F51F96F39D00A31FC5 /* JJQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJQRCodeViewController.swift; sourceTree = "<group>"; };
-		D69054F91F9703D600A31FC5 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		D69054FB1F9762CA00A31FC5 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
+		D69054FE1F9873DE00A31FC5 /* JJGoodsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJGoodsDetailViewController.swift; sourceTree = "<group>"; };
 		D69356601F8DAF9400C9756B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		D695668E1F8F08080053343A /* JJShangJiaTopCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJShangJiaTopCollectionViewCell.swift; sourceTree = "<group>"; };
 		D69566911F8F1C120053343A /* UIButton+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Array.swift"; sourceTree = "<group>"; };
@@ -219,6 +225,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D61AAAF81FC69B1C00EF8FC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D61AAB6A1FC6C96000EF8FC0 /* JJHomeModel.h */,
+				D61AAB6B1FC6C96000EF8FC0 /* JJHomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D686C8611F7C932C002FCAFA /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +310,14 @@
 			path = JJQRCode;
 			sourceTree = "<group>";
 		};
+		D69054FD1F9872D600A31FC5 /* JJShopCar */ = {
+			isa = PBXGroup;
+			children = (
+				D69054FE1F9873DE00A31FC5 /* JJGoodsDetailViewController.swift */,
+			);
+			path = JJShopCar;
+			sourceTree = "<group>";
+		};
 		D69566901F8F1B150053343A /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,10 +374,11 @@
 		D69A417C1F7B461800F363BB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D61AAB661FC6C27600EF8FC0 /* JJBaseModel.h */,
+				D61AAB651FC6C27600EF8FC0 /* JJBaseModel.m */,
 				D69A41861F7B4A0A00F363BB /* JJTabBarViewController.swift */,
 				D69A41881F7B4A2900F363BB /* JJNavController.swift */,
 				D69A418A1F7B690D00F363BB /* JJBaseViewController.swift */,
-				D69054F91F9703D600A31FC5 /* NetworkRequest.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -372,6 +396,7 @@
 		D69A417E1F7B461800F363BB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D61AAAF81FC69B1C00EF8FC0 /* Model */,
 				D68CFC0C1F8CA24F005697F2 /* Views */,
 				D69A418E1F7B697300F363BB /* JJHomeViewController.swift */,
 			);
@@ -449,6 +474,7 @@
 		D6C751BF1F8B260500D39C22 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D69054FD1F9872D600A31FC5 /* JJShopCar */,
 				D69054F41F96F37400A31FC5 /* JJQRCode */,
 				D6A152F21F94A77700CDEA24 /* JJGuideView */,
 				D6A152F61F94A77700CDEA24 /* JJSliderView */,
@@ -586,13 +612,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftProject-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6EB519218C6CD9DDEAB04D96 /* [CP] Embed Pods Frameworks */ = {
@@ -601,9 +630,26 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DGElasticPullToRefresh/DGElasticPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGElasticPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -616,9 +662,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources.sh",
+				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -633,6 +682,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D69054F61F96F39D00A31FC5 /* JJQRCodeViewController.swift in Sources */,
+				D69054FF1F9873DE00A31FC5 /* JJGoodsDetailViewController.swift in Sources */,
+				D61AAB671FC6C27600EF8FC0 /* JJBaseModel.m in Sources */,
 				D6FA5BEA1F7F865A00C08659 /* JJBottomADCollectionViewCell.swift in Sources */,
 				D69A41891F7B4A2900F363BB /* JJNavController.swift in Sources */,
 				D69A418F1F7B697300F363BB /* JJHomeViewController.swift in Sources */,
@@ -654,6 +705,7 @@
 				D6A152F81F94A77700CDEA24 /* JJLogViewController.swift in Sources */,
 				D6A152F11F94A29500CDEA24 /* Model.xcdatamodeld in Sources */,
 				D6A152FD1F94AF9200CDEA24 /* UIView+Ex.swift in Sources */,
+				D61AAB6C1FC6C96000EF8FC0 /* JJHomeModel.m in Sources */,
 				D6A152FB1F94A9AE00CDEA24 /* JJSliderView.swift in Sources */,
 				D689FF131F8E2147004A4AF8 /* JJShangjiaNav.swift in Sources */,
 				D6A14DE21F90896900DD6DDE /* JJShangJiaFooterCollectionReusableView.swift in Sources */,
@@ -672,7 +724,6 @@
 				D6A14DDA1F9065FE00DD6DDE /* JJShangJiaHotCollectionViewCell.swift in Sources */,
 				D69A41871F7B4A0A00F363BB /* JJTabBarViewController.swift in Sources */,
 				D69054FC1F9762CA00A31FC5 /* SwiftNotice.swift in Sources */,
-				D69054FA1F9703D600A31FC5 /* NetworkRequest.swift in Sources */,
 				D69A41851F7B461800F363BB /* SplashView.swift in Sources */,
 				D686C8781F7C9926002FCAFA /* JJTitleCollectionReusableView.swift in Sources */,
 				D69A41931F7B698C00F363BB /* JJShangJiaViewController.swift in Sources */,

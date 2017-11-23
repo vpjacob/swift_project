@@ -37,7 +37,12 @@ class JJMeViewController: JJBaseViewController,UICollectionViewDelegate,UICollec
         if !UserDefaults.standard.bool(forKey: isLogin) {
             self.present(JJLogViewController(), animated: true, completion: nil)
         }
-        self.automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
+        } else {
+            // Fallback on earlier versions
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
         initData()
         let leftImage = UIImage(named: "me_more@2x")
         let leftBtn = UIBarButtonItem(image: leftImage, style: UIBarButtonItemStyle.plain, target: self, action: nil)

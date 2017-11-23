@@ -26,12 +26,11 @@ class JJShopViewController: JJBaseViewController{
     
     func selectedButton(button: UIButton) {
         print("ddddd" + button.tag.description)
-        let array = [UIImage(named: "sz"),UIImage(named: "gg"),UIImage(named: "gd")]
+
         
+        self.navigationController?.pushViewController(JJGoodsDetailViewController(), animated: true)
         
-       
-        self.pleaseWaitWithImages(array as! Array<UIImage>, timeInterval: 100)
-//        self.navigationController?.pushViewController(JJQRCodeViewController(), animated: true)
+        //        self.navigationController?.pushViewController(JJQRCodeViewController(), animated: true)
     }
 
     override func viewWillAppear(_ animated: Bool) {

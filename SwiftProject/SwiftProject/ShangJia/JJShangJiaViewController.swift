@@ -25,7 +25,12 @@ class JJShangJiaViewController: JJBaseViewController ,UICollectionViewDelegate,U
     }
     
     override func viewDidLoad() {
-        self.automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
+        } else {
+            // Fallback on earlier versions
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
         initData()
         super.viewDidLoad()
         if !UserDefaults.standard.bool(forKey: isLogin) {
@@ -47,7 +52,7 @@ class JJShangJiaViewController: JJBaseViewController ,UICollectionViewDelegate,U
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y + KStatusBar
+        let offsetY = scrollView.contentOffset.y
         if offsetY > 0 && offsetY <= KNav_Height {
             shangjiaNav.backgroundColor = UIColor().hexStringToColor(hexString: "#ff602f").withAlphaComponent(offsetY/KNav_Height)
         }else if (offsetY > KNav_Height){

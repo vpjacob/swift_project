@@ -10,8 +10,6 @@ import UIKit
 import SnapKit
 
 class JJShangjiaNav: UIView {
-
-    
     
    public var leftBtn:UIButton = {
        let btn = UIButton(type: UIButtonType.custom)
@@ -51,14 +49,17 @@ class JJShangjiaNav: UIView {
     func setupUI() {
         self.addSubview(leftBtn)
         self.addSubview(searchBtn)
-        searchBtn.snp.makeConstraints { (make) in
-            make.size.equalTo(CGSize(width: 160, height: 30))
-            make.center.equalTo(CGPoint(x: Screen_Width * 0.5, y: 37))
-        }
         leftBtn.snp.makeConstraints { (make) in
             make.centerYWithinMargins.equalTo(5)
+            make.bottom.equalTo(KNav_Height - 10)
             make.width.equalTo(Screen_Width * 0.5 - 90)
             make.left.equalTo(5)
+        }
+        searchBtn.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 160, height: 30))
+            make.center.equalTo(CGPoint(x: Screen_Width * 0.5, y: KNav_Height * 0.5 + 5))
+//            make.centerX.equalTo(Screen_Width * 0.5)
+//            make.bottom.equalTo(KNav_Height - 10)
         }
     }
 

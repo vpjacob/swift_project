@@ -27,7 +27,12 @@ class JJGuanjiaViewController: JJBaseViewController,UICollectionViewDataSource,U
             self.present(JJLogViewController(), animated: true, completion: nil)
         }
         
-        self.automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            self.jjCollectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
+        } else {
+            // Fallback on earlier versions
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
         initData()
         self.view.addSubview(jjCollectionView)
 

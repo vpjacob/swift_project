@@ -8,12 +8,7 @@
 
 import UIKit
 
-
-
-
 class JJBaseViewController:UIViewController,UITableViewDelegate,UITableViewDataSource{
-
-    
     
    lazy var jjTabelView:UITableView = {
     let rect = CGRect(x: 0, y: 64, width: Screen_Width, height: Screen_Height - 64)
@@ -50,8 +45,6 @@ class JJBaseViewController:UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-    
 
 }
