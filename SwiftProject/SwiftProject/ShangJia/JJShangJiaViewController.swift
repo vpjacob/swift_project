@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 
 fileprivate let padding:CGFloat = 5.0
@@ -16,12 +18,22 @@ fileprivate let itemSizeSection2 = (Screen_Width - 2 * margin - 2 * padding - 3)
 class JJShangJiaViewController: JJBaseViewController ,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func initData() {
-        self.dataSource = [
-            [["":""],],
-            [["":""],],
-            [["img":"store_zx1","title":"人气招牌美食"],["img":"store_zx2","title":"人气招牌美食"],["img":"store_zx3","title":"人气招牌美食"],["img":"store_zx4","title":"人气招牌美食"],["img":"store_zx5","title":"人气招牌美食"],["img":"store_zx6","title":"人气招牌美食"],],
-            [["img":"store_sj1","title":"北京麦当劳凯旋城","saleCount":"33","distance":"亚运村281m"],["img":"store_sj1","title":"北京麦当劳凯旋城","saleCount":"33","distance":"亚运村281m"],],
-        ]
+//        self.dataSource = [
+//            [["":""],],
+//            [["":""],],
+//            [["img":"store_zx1","title":"人气招牌美食"],["img":"store_zx2","title":"人气招牌美食"],["img":"store_zx3","title":"人气招牌美食"],["img":"store_zx4","title":"人气招牌美食"],["img":"store_zx5","title":"人气招牌美食"],["img":"store_zx6","title":"人气招牌美食"],],
+//            [["img":"store_sj1","title":"北京麦当劳凯旋城","saleCount":"33","distance":"亚运村281m"],["img":"store_sj1","title":"北京麦当劳凯旋城","saleCount":"33","distance":"亚运村281m"],],
+//        ]
+        //轮播图
+        let dic = ["script":"mobile.business.product","needTrascation":false,"funName":"queryCarouselList"] as [String : Any]
+        
+        Alamofire.request(KurlStr, method: .get, parameters: dic, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+            let json = JSON(data: response.data!)
+            print(json)
+            
+        }
+        
+    
     }
     
     override func viewDidLoad() {

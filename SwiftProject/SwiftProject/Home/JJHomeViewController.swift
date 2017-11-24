@@ -12,6 +12,7 @@ import CoreData
 import GoogleMobileAds
 import Alamofire
 import SwiftyJSON
+import Kingfisher
 
 fileprivate let margin:CGFloat = 5.0
 fileprivate let padding:CGFloat = 12.0
@@ -21,20 +22,6 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
     var nav:JJHomeNav?
     
     var adInterstitial = GADInterstitial(adUnitID: "ca-app-pub-9554187975714748/4439146610")
-    var timer = Timer()
-    
-    
-    
-    func initDatas() {
-            self.dataSource = [
-        ["header"],
-        ["banner"],
-        ["home_tu1","home_tu2","home_tu2","home_tu1",],
-        ["home_lx1","home_lx2","home_lx2","home_lx1","home_lx01","home_lx02","home_lx03"],
-        [["img":"home_ry1","title":"清新家具陪伴您左右清新家具陪伴您左右"],["img":"home_ry2","title":"清新家具清新家具陪伴您左右陪伴您左右"]],
-        [["img":"home_ry1","title":"清新家具清新家具陪伴您左右陪伴您左右"],["img":"home_ry2","title":"清新家具陪伴您清新家具陪伴您左右左右"],["img":"","title":"清新家具清新家具陪伴您左右陪伴您左右"],["img":"","title":"清新家具清新家具陪伴您左右陪伴您左右"],["img":"","title":"清新家清新家具陪伴您左右具陪伴您左右"],["img":"","title":"清新家清新家具陪伴您左右具陪伴您左右"],["img":"","title":"清新家具清新家具陪伴您左右陪伴您左右"]],
-        ]
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +32,6 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
             self.automaticallyAdjustsScrollViewInsets = false
         }
         adInit()
-        initDatas()
         setupUI()
         getData()
         // Do any additional setup after loading the view.
@@ -56,8 +42,6 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
         self.adInterstitial.load(gadRequest1)
         
     }
-    
-    
     
     func setupUI() {
         nav = JJHomeNav(frame: .zero)
@@ -86,10 +70,6 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
 //            } catch  {
 //                fatalError("buneng bao cun")
 //            }
-
-            
-            
-            
         }
         
         
@@ -130,20 +110,53 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
         Alamofire.request(KurlStr, parameters: dic)
             .responseJSON { response in
 
+                self.dataSource = [
+                    ["header"],
+                ]
+                
                 let json = JSON(data: response.data!)
-                print("JSON: \(json)")
-                let homeModel = JJHomeModel.changeResponseJSONObject(json.rawValue)
-                print(homeModel!)
-                print((homeModel! as! JJHomeModel).formDataset.placeFourList)
-//                let ho = JJDatasetModel.changeResponseJSONObject(json.rawValue)
-//                print(ho!)
-                let str:String = (homeModel! as! JJHomeModel).formDataset.placeFourList
+//                print("JSON: \(json)")
                 
-                let datas = str.data(using: String.Encoding.utf8)
-                let json2 = JSON(data: datas!)
-                let rowModelArray = JJHomeRowModel.changeJSONArray(json2.rawValue as! [Any])
-                print(rowModelArray![0])
+//                print(homeModel!)
+                guard let homeModel = JJHomeModel.changeResponseJSONObject(json.rawValue) else {
+                    print("网络错误")
+                    return
+                }
+                print((homeModel as! JJHomeModel).formDataset.placeFourList)
+
+                //第1组 轮播
+                let strOne:String = (homeModel as! JJHomeModel).formDataset.placeOneList
+                let dataOneList = strOne.data(using: String.Encoding.utf8)
+                let jsonOneList = JSON(data: dataOneList!)
+                let oneListArray = JJHomeRowModel.changeJSONArray(jsonOneList.rawValue as! [Any])
                 
+                //第2组
+                let strTwo:String = (homeModel as! JJHomeModel).formDataset.placeTwoList
+                let dataTwoList = strTwo.data(using: String.Encoding.utf8)
+                let jsonTwoList = JSON(data: dataTwoList!)
+                let twoListArray = JJHomeRowModel.changeJSONArray(jsonTwoList.rawValue as! [Any])
+                
+                //第3组
+                let strThree:String = (homeModel as! JJHomeModel).formDataset.placeThreeList
+                let dataThreeList = strThree.data(using: String.Encoding.utf8)
+                let jsonThreeList = JSON(data: dataThreeList!)
+                let threeListArray = JJHomeRowModel.changeJSONArray(jsonThreeList.rawValue as! [Any])
+                
+                
+                //第4组
+                let strFour:String = (homeModel as! JJHomeModel).formDataset.placeFourList
+                let dataFourList = strFour.data(using: String.Encoding.utf8)
+                let jsonFourList = JSON(data: dataFourList!)
+                let fourListArray = JJHomeRowModel.changeJSONArray(jsonFourList.rawValue as! [Any])
+                
+                self.dataSource.add(oneListArray!)
+                self.dataSource.add(twoListArray!)
+                self.dataSource.add(threeListArray!)
+                self.dataSource.add(fourListArray!)
+                
+                DispatchQueue.main.async(execute: {
+                    self.collectionView.reloadData()
+                })
                 
         }
     }
@@ -158,7 +171,6 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
                 nav?.backgroundColor = UIColor().hexStringToColor(hexString: "#ff602f").withAlphaComponent(offsetY/KNav_Height)
             }else{
                 UIView.animate(withDuration: 0.1, animations: {
-//                    self.nav?.backgroundColor?.withAlphaComponent(1)
                     
                     self.nav?.backgroundColor = UIColor().hexStringToColor(hexString: "#ff602f").withAlphaComponent(-offsetY/KNav_Height)
                 }, completion: { (_) in
@@ -168,18 +180,18 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
     
         }
 
-    
-    
     // MARK: - FSPagerViewDelegate
     func numberOfItems(in pagerView: FSPagerView) -> Int {
+        let array:NSArray = dataSource[1] as! NSArray
         
-        return 2
+        return array.count
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-        
-        cell.imageView?.image = UIImage(named: "home_jx")
+        let array:NSArray = dataSource[1] as! NSArray
+        let model = array[index] as! JJHomeRowModel
+        cell.imageView?.kf.setImage(with: URL(string: model.img_url))
         cell.textLabel?.text = "banner"
         return cell
     }
@@ -191,19 +203,21 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let array:NSArray = dataSource[section] as! NSArray
-        
+        if section == 1{
+            return 1
+        }
         return array.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.section == 0 {
+        if indexPath.section == 0 {//
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "noCell", for: indexPath)
             cell.backgroundColor = UIColor.yellow
             return cell
         }
         
-        if indexPath.section == 1 {
+        if indexPath.section == 1 {//轮播图
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath)
             cell.contentView.addSubview(sycleView)
             return cell
@@ -212,35 +226,26 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
         if indexPath.section == 2 || indexPath.section == 3 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JJImgViewCollectionViewCell", for: indexPath) as! JJImgViewCollectionViewCell
             let array:NSArray = dataSource[indexPath.section] as! NSArray
-            cell.imageView.image = UIImage(named: array[indexPath.row] as! String)
+            let model = array[indexPath.row] as! JJHomeRowModel
+            cell.imageView.kf.setImage(with: URL(string: model.img_url))
             return cell
         }
         if indexPath.section == 4 {
-            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JJImgViewTitleCollectionViewCell", for: indexPath) as! JJImgViewTitleCollectionViewCell
             let array:NSArray = dataSource[indexPath.section] as! NSArray
-            let dic:[String:String] = array[indexPath.row] as! [String : String]
-            
-            cell.imageView.image = UIImage(named: dic["img"]!)
-            cell.titleLabel.text = dic["title"]!
+            let model = array[indexPath.row] as! JJHomeRowModel
+            cell.imageView.kf.setImage(with: URL(string: model.img_url))
             return cell
         }
         
         if indexPath.section == 5 {
-            let array:NSArray = dataSource[indexPath.section] as! NSArray
-            let dic:[String:String] = array[indexPath.row] as! [String : String]
-
             if indexPath.row < 2 {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JJNewsImgCollectionViewCell", for: indexPath) as! JJNewsImgCollectionViewCell
-                cell.imageView.image = UIImage(named: dic["img"]!)
-                cell.titleLabel.text = dic["title"]!
                 return cell
             }
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JJNewsTitleCollectionViewCell", for: indexPath) as! JJNewsTitleCollectionViewCell
-            cell.titleLabel.text = dic["title"]!
             return cell
-            
         }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JJImgViewCollectionViewCell", for: indexPath)
@@ -275,6 +280,10 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
             return CGSize(width: Screen_Width, height: 1)
+        }
+        
+        if indexPath.section == 1 {
+            return CGSize(width: Screen_Width, height: 200)
         }
         
         if indexPath.section == 2 || indexPath.section == 3{
@@ -330,7 +339,6 @@ class JJHomeViewController: JJBaseViewController,FSPagerViewDataSource,FSPagerVi
     // MARK: - lazy
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
-//        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: 12)
         
         let view = UICollectionView(frame: CGRect(x: 0, y: 0, width: Screen_Width, height: Screen_Height - KTabbar_Height), collectionViewLayout: flowLayout)
         view.backgroundColor = UIColor.white

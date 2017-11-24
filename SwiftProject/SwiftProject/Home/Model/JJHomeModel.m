@@ -27,4 +27,8 @@
 
 @implementation JJHomeRowModel
 
+- (NSString *)img_url{
+    return [NSString stringWithFormat:@"http://www.ppke.cn/%@",_img_url];
+}
+
 @end
