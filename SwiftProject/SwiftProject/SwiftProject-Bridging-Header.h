@@ -15,7 +15,7 @@
 #import "JJBaseModel.h"
 
 #import "JJHomeModel.h"
-
+#import "JJShangJiaModel.h"
 
 
 

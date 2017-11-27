@@ -8,12 +8,20 @@
 
 import UIKit
 import FSPagerView
-
+import Kingfisher
 
 class JJShangJiaTopCollectionViewCell: UICollectionViewCell,FSPagerViewDataSource,FSPagerViewDelegate {
     
     var buttons:[UIButton]?
     var buttons2:[UIButton]?
+    public var bannerArrayModel:[JJShangJiaModel]?
+    {
+        didSet{
+            self.bannerView.reloadData()
+        }
+    }
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +32,11 @@ class JJShangJiaTopCollectionViewCell: UICollectionViewCell,FSPagerViewDataSourc
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    
     func setupUI() {
+        self.bannerArrayModel = NSMutableArray() as? [JJShangJiaModel]
+        
         self.contentView.addSubview(bannerView)
         self.contentView.addSubview(imageViewBackground)
         self.imageViewBackground.addSubview(scrollView)
@@ -66,12 +78,12 @@ class JJShangJiaTopCollectionViewCell: UICollectionViewCell,FSPagerViewDataSourc
     // MARK: - banner
     
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return 2
+        return (bannerArrayModel?.count)!
     }
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-        
-        cell.imageView?.image = UIImage(named: "store_background")
+        let model = self.bannerArrayModel![index]
+        cell.imageView?.kf.setImage(with: URL(string: model.image_url))
         return cell
     }
     

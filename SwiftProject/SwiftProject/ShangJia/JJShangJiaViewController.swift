@@ -10,30 +10,63 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-
 fileprivate let padding:CGFloat = 5.0
 fileprivate let margin:CGFloat = 12.0
 fileprivate let itemSizeSection2 = (Screen_Width - 2 * margin - 2 * padding - 3) / 3
 
 class JJShangJiaViewController: JJBaseViewController ,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
+    var bannerArrayModel:[JJShangJiaModel]?
+    var typeIconArrayModel:[JJShangJiaTypeIconModel]?
+    
+    
     func initData() {
-//        self.dataSource = [
-//            [["":""],],
-//            [["":""],],
-//            [["img":"store_zx1","title":"人气招牌美食"],["img":"store_zx2","title":"人气招牌美食"],["img":"store_zx3","title":"人气招牌美食"],["img":"store_zx4","title":"人气招牌美食"],["img":"store_zx5","title":"人气招牌美食"],["img":"store_zx6","title":"人气招牌美食"],],
-//            [["img":"store_sj1","title":"北京麦当劳凯旋城","saleCount":"33","distance":"亚运村281m"],["img":"store_sj1","title":"北京麦当劳凯旋城","saleCount":"33","distance":"亚运村281m"],],
-//        ]
-        //轮播图
-        let dic = ["script":"mobile.business.product","needTrascation":false,"funName":"queryCarouselList"] as [String : Any]
+        self.dataSource = [
+            [["":""],],
+            [["":""],],
+            [["img":"store_zx1","title":"人气招牌美食"],["img":"store_zx2","title":"人气招牌美食"],["img":"store_zx3","title":"人气招牌美食"],["img":"store_zx4","title":"人气招牌美食"],["img":"store_zx5","title":"人气招牌美食"],["img":"store_zx6","title":"人气招牌美食"],],
+            [["img":"store_sj1","title":"北京麦当劳凯旋城","saleCount":"33","distance":"亚运村281m"],["img":"store_sj1","title":"北京麦当劳凯旋城","saleCount":"33","distance":"亚运村281m"],],
+        ]
         
-        Alamofire.request(KurlStr, method: .get, parameters: dic, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+        bannerData()
+        infoTypeData()
+        
+    }
+    
+    func infoTypeData() {
+        let dic = ["script":"mobile.business.business","needTrascation":false,"funName":"findCompanyType"] as [String : Any]
+        self.typeIconArrayModel = NSMutableArray() as? [JJShangJiaTypeIconModel]
+        Alamofire.request(KurlStr, method: .get, parameters: dic, encoding: URLEncoding.default, headers: nil).response { (response) in
             let json = JSON(data: response.data!)
-            print(json)
+            guard let companyTypeStr = json["formDataset"]["companyType"].string else{
+                return
+            }
+            let companyTypeData = companyTypeStr.data(using: String.Encoding.utf8)
+            let companyTypeJson = JSON(data: companyTypeData!)
+            self.typeIconArrayModel = JJShangJiaTypeIconModel.changeJSONArray(companyTypeJson.rawValue as! [Any]) as? [JJShangJiaTypeIconModel]
             
+            print(self.typeIconArrayModel)
         }
         
+    }
     
+    func bannerData() {
+        //轮播图
+        let dic = ["script":"mobile.business.product","needTrascation":false,"funName":"queryCarouselList"] as [String : Any]
+        bannerArrayModel = NSMutableArray() as? [JJShangJiaModel]
+        Alamofire.request(KurlStr, method: .get, parameters: dic, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+            let json = JSON(data: response.data!)
+            guard let carouselListStr = json["formDataset"]["carouselList"].string else{
+                return
+            }
+            let carouselListData = carouselListStr.data(using: String.Encoding.utf8)
+            let carouselListJson = JSON(data: carouselListData!)
+            self.bannerArrayModel = JJShangJiaModel.changeJSONArray(carouselListJson.rawValue as! [Any]) as? [JJShangJiaModel]
+            DispatchQueue.main.async(execute: {
+                self.collectionView.reloadSections(NSIndexSet(index: 0) as IndexSet)
+            })
+            
+        }
     }
     
     override func viewDidLoad() {
@@ -71,7 +104,7 @@ class JJShangJiaViewController: JJBaseViewController ,UICollectionViewDelegate,U
             shangjiaNav.backgroundColor = UIColor().hexStringToColor(hexString: "#ff602f").withAlphaComponent(offsetY/KNav_Height)
         }else{
             UIView.animate(withDuration: 0.1, animations: {
-                //                    self.nav?.backgroundColor?.withAlphaComponent(1)
+    //  self.nav?.backgroundColor?.withAlphaComponent(1)
                 
                 self.shangjiaNav.backgroundColor = UIColor().hexStringToColor(hexString: "#ff602f").withAlphaComponent(-offsetY/KNav_Height)
             }, completion: { (_) in
@@ -106,6 +139,8 @@ class JJShangJiaViewController: JJBaseViewController ,UICollectionViewDelegate,U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0  {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JJShangJiaTopCollectionViewCell", for: indexPath) as! JJShangJiaTopCollectionViewCell
+            cell.bannerArrayModel = self.bannerArrayModel
+            
             return cell
         }
         
